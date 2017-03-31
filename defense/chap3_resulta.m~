@@ -1,0 +1,43 @@
+n5_mu800 = [31.82 31.97 31.99 32.04 32.03 32.08 32.10 32.12 32.08 31.99 ];
+n10_mu800 = [];
+n15_mu800 = [];
+n20_mu800 = [];
+n25_mu800 = [];
+
+x=0:0.05:0.55;
+baseline=[31.45 31.45 31.45 31.45 31.45 31.45 31.45 31.45 31.45 31.45 31.45 31.45];
+hbase = plot(x, baseline, '--r');
+hold;
+% h0 = plot(x, n2_mu300, 'c');
+h1 = plot(x, n4_mu300, 'r');
+% h2 = plot(x, n6_mu300, 'g');
+% h3 = plot(x, n8_mu300, 'b');
+% h4 = plot(x, n10_mu300, 'm');
+h5 = plot(x, n12_mu300, 'k');
+% h6 = plot(x, n14_mu300, 'y');
+% h7 = plot(x, n16_mu300, 'c');
+% h8 = plot(x, n18_mu300, 'g');
+h9 = plot(x, n20_mu300, 'b');
+% h10 = plot(x, n24_mu300, 'c');
+% h11 = plot(x, n28_mu300, 'r');
+h12 = plot(x, n32_mu300, 'g');
+h13 = plot(x, n64_mu300, 'r');
+
+% legend(h0, 'N = 2');
+legend(h1, 'N = 4');
+% legend(h2, 'N = 6');
+% legend(h3, 'N = 8');
+% legend(h4, 'N = 10');
+legend(h5, 'N = 12');
+% legend(h6, 'N = 14');
+% legend(h7, 'N = 16');
+% legend(h8, 'N = 18');
+legend(h9, 'N = 20');
+% legend(h10, 'N = 24');
+% legend(h11, 'N = 28');
+legend(h12, 'N = 32');
+legend(h13, 'N = 64');
+
+xlabel('weight for DTW score( w_1 in eq. (11) )','FontSize',16);
+ylabel('MAP (%)','FontSize',16);
+title('\mu=300','FontSize',16);
