@@ -7,7 +7,7 @@
 是指從資料庫中擷取出與某個主題(Topic)相關之檢索對象(Object)的行為。基本使用流程為：使用者輸入了一段查詢對象$Q$(Query),系統能夠從資料庫中傳回和這個主題相關的檢索對象(Object)，並進一步依據檢索對象和主題的相關程度進行排序(Ranking)，以方便使用者瀏覽並取得所需的檢索對象。如圖\ref{fig:ch2_IR}。
 \begin{figure}
 \centering
-\includegraphics[scale=0.5]{images/ch2_Ir.png}
+\includegraphics[scale=0.4]{images/ch2_Ir.png}
 \caption{資訊檢索系統基本架構} \label{fig:ch2_IR}
 \end{figure}
 
@@ -72,7 +72,7 @@ Expansion)~\cite{voorhees1994query,xu1996query}。
 
 動態時間校準的目的是要在 $D(i, j)$ 上找一條距離總合最短的路徑從 $(1, s)$ 到 $(|\mathbf{X}|, e)$ 表示從 $\mathbf{X}$對應到$(\mathbf{y}_s, ..., \mathbf{y}_e)$ (因為查詢詞一定要被完全對應，而語音文件不一定要被完全對應到)。由於假設區域可以出現在語音文件中的任何地方， 因此片段式動態時間校準將距離表格 $D(i, j)$ 切成數個重疊的對角片段 (寬度為 $R$)，所以說每個片段的起始點分別為 $(1, 1), (1, 1+R), (1, 1+2R),...$ 如圖 ~\ref{fig:chap4_sdtw} 所示，每個對角片段都代表了一個可能出現查詢詞的區域，所以要在每個對角片段上找出距離總合最短的路徑，即這個對角片段上的假設區域。片段式動態時間校準會從每個片段中找出一段距離總合最短的路徑，在每個片段中所有對應的路徑 (Warping Path) 都必須要完整地待在片段內，不可超出片段。
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.3]{images/chap4_sdtw.png}
 \caption{片段式動態時間校準示意圖~\cite{zhang2009unsupervised}} \label{fig:chap4_sdtw}
@@ -101,10 +101,10 @@ Expansion)~\cite{voorhees1994query,xu1996query}。
 C_{\phi}(\mathbf{X}, \mathbf{Y}) = \sum_{t=1}^{|\phi|} \rho(\mathbf{x}_{i_t},\mathbf{y}_{j_t})
 \end{equation}
 
-\begin{figure}
+\begin{figure}[h]
 \centering
-\includegraphics[scale=0.45]{images/chap2_segdtw_exp1.png}
-\includegraphics[scale=0.45]{images/chap2_segdtw_exp2.png}
+\includegraphics[scale=0.4]{images/chap2_segdtw_exp1.png}
+\includegraphics[scale=0.4]{images/chap2_segdtw_exp2.png}
 \caption{示意如何從兩個對角片段中找到相關分數最大的假設區域，其中 $R=2$}
 \label{fig:chap2_sdtw_exp}
 \end{figure}
@@ -112,11 +112,9 @@ C_{\phi}(\mathbf{X}, \mathbf{Y}) = \sum_{t=1}^{|\phi|} \rho(\mathbf{x}_{i_t},\ma
 
 
 
-
 每個片段中使得 $C_{\phi}(\mathbf{X}, \mathbf{Y})$ 最小，即使得相關分數 $-C_{\phi}(\mathbf{X}, \mathbf{Y})$ 最大的那條 $\phi$ 即為每個片段中的假設區域 $(\mathbf{y}_{j_1},...,\mathbf{y}_{j_{|\phi|}})$ ，而在每個片段中找到最大相關分數的路徑可以使用動態規劃 (Dynamic Programming) 求解。圖~\ref{fig:chap2_sdtw_exp}中顯示了兩個對角片段與其對應的最大相關分數的路徑與假設區域。圖中上半部中的 $(\mathbf{y}_1, ..., \mathbf{y}_8)$ 代表在第一個對角片段中找到的假設區間，圖中下半部中的 $(\mathbf{y}_3, ..., \mathbf{y}_8)$ 則是在第二個對角片段中找到的假設區域。 找到所有假設區域後，將假設區域按照其與查詢詞的相關分數進行排序後，即為口述語彙偵測的結果。在一篇語音文件中找到所有可能的假設區域需要 $O(|\mathbf{X}||\mathbf{Y}|)$ 的計算量來計算點與點之間的距離 $\rho$，並需要$O(|\mathbf{X}||\mathbf{Y}|)$的計算量來找到相關分數最大的路徑。
 
-
-
+\vspace{20mm}
 \subsection{資訊檢索評估機制}
 為了有效比較彼此系統，制訊檢索評估機制的標準是很重要的一環，本節將對一些常見以及本論文所使用的評分標準一一做介紹。
 
@@ -159,216 +157,190 @@ MAP = \frac{1}{|Q|} \sum_Q \frac{\sum_{d \in D^R}precision(d)}{|D^R|}
 \end{equation}
 其中Q代表查詢詞的集合，$|Q|$為查詢詞的總數，$D^R$為和查詢詞Q相關的文件d的集合，$|D^R|$代表和查詢詞Q相關的文件數量。precision(d)代表系統檢索出文件d時的準確率。
 
-\section{相關回饋}
-相關回饋 (Relevance Feedback) 是資訊檢索的一項重要的技術~\cite{ruthven2003survey}，通常可以顯著地提升系統的成果。相關回饋基本的架構如圖 ~\ref{fig:chap2_prf}，使用者輸入查詢詞之後，系統會先根據查詢詞與所有文件的相關分數 $S(Q, d)$ 排序出第一次檢索結果 (First-pass Result)。然後把第一次檢索結果中部分文件標注為與查詢詞相關的正例 (Positive Example) ，部分文件標注為與查詢詞非相關的反例 (Negative Example)
-，系統會再根據標注的結果重新計算查詢詞與文件的關係，把調整後的結果呈現給使用者看。
-\begin{figure}
+
+
+
+\section{深層類神經網路（Deep Neural Network, DNN）}
+\subsection{簡介}
+深層類神經網路發想於生物的神經系統結構。神經系統由非常多的神經元組成，彼此以樹突、軸突與突觸連結，每顆神經元自己有活化閾值來決定激發
+態與否。根據此仿生的觀察，便產生一種數學模型（如圖~\ref{fig:ch2_bio_neuron}與~\ref{fig:ch2_math_neuron})，將其層層疊起（如圖~\ref{fig:ch2_DNN}），即為深度類神經網路的全貌。
+\begin{figure}[hb]
 \centering
-\includegraphics[scale=0.7]{images/chap2_prf.png}
-\caption{相關回饋的基本架構} \label{fig:chap2_prf}
+\subfloat[][生物學上的單顆神經元結構]{\includegraphics[scale=0.3]{images/ch2_bio_neuron.jpg}\label{fig:ch2_bio_neuron}}
+\subfloat[][數學上的單顆神經元結構(感知器）]{\includegraphics[scale=0.3]{images/ch2_single_neuron.png}\label{fig:ch2_math_neuron}}
+\caption{類神經網路的單顆神經元}
 \end{figure}
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{images/ch2_DNN.png}
+\caption{基本深度類神經網路架構圖} \label{fig:ch2_DNN}
+\end{figure}
 
-把部分文件標注成正例與反例的方法可以大致分為以下幾種：
-
-\subsection{外顯回饋}
-外顯回饋 (Explicit Feedback) 的做法通常是由使用者告訴系統文件是否為正例或反例，進而增進檢索的成果。外顯回饋可分為使用者回饋 (User Feedback) 和積極回饋 (Active Feedback)
-，使用者回饋是由使用者依據第一次檢索結果按照文件相關性進行標注~\cite{salton1975vector, zhai2001model, robertson1976relevance}；積極回饋則是由系統主動詢問使用者某文件為正例或反例（通常是系統無法決定的文件），此方法可以盡量減少使用者的標注量以改進系統的成果~\cite{tong2001support, goh2004multimodal, he2004mean}。
-
-\subsection{隱含回饋}
-隱含回饋 (Implicit Feedback) 是不由使用者直接提供正反例的資訊，而且透過觀察使用者的行為 (Behavior) 而分析文件的相關性，因此使用者並不知道自己正在回饋給系統。最常用的方法是點擊數據 (Click-through Data)，比如檢索系統的前幾名如果是$d_1, d_2, d_3, ...$，而使用者沒有檢視$d_1$，而是直接檢視$d_2$，如此一來系統就可以假設$d_1$是不相關的文件，而$d_2$是相關的文件。除此之外，還可以利用查詢記錄 (Query Log)、網頁捲動
-(Scrolling)和滑鼠軌跡 (Mouse Movements) 等~\cite{kelly2003implicit}。
-
-\subsection{虛擬回饋}
-\label{sec:pseudo_feedback}
-虛擬回饋 (Pseudo Feedback) 不需要使用者的參與，在系統產生第一次檢索結果後，系統會直接假設其中某些部分為正例，某些部分為反例（通常是直接假設相關分數最高的$N$篇為正例，相關分數最低的$N$篇為反例）。系統會再根據這些假設進行進一步的檢索，在這個過程中，系統雖然沒有得到額外的資訊，但系統的成效通常能有一定的提升~\cite{kurland2005better, xu1996query, yu2003improving, sakai2005flexible, cao2008selecting, lee2008cluster, lv2009comparative, lv2010positional}，而虛擬回饋也是此篇論文的主要研究主題之一。
-
-\subsection{查詢詞擴展與文件擴展}
-\label{sec:query_doc_exp}
-語意檢索最大的困難點是由於最理想的檢索結果不一定要包含查詢詞，假設查詢詞是「東京旅遊」，則包含「東京鐵塔」的文件的 $S(Q, d)$ 則會非常低，常見的解決方法是使用查詢詞擴展 (Query Expansion) 和文件擴展 (Document Expansion)，一個是將許多與查詢詞語義上相關的詞加入原查詢詞中成為新的查詢詞模型，另一是將文件加入更多語義上相關的詞，這裡使用的是潛藏語意分析 (Probabilistic Latent Semantic Analysis, PLSA) 來找到與語義上相關的詞。這兩個方法都能解決查詢詞與文件中詞彙不匹配的問題，以下將分別介紹：
-
-\subsubsection{查詢詞擴展 (Query Expansion)}
-\label{sec:prf}
-這裡使用正規化查詢詞混合模型 (Query-Regularized Mixture Model) 作為查詢詞擴展的實作方法，這套方法假設每篇文件都是由查詢詞相關詞彙 (Query-Related Terms) 和一般詞彙 (General Words)
-所組成，而這兩者的比例在每篇文件中都是不一樣的。舉例來說，當一篇實際上不相關的文件被錯誤地假設成虛擬相關文件時，這個比例應該要很低，而反之亦然。然而實際上這個比例是不知道的，不過可以從虛擬相關文件中估計出來這個比例，估計完之後新的查詢詞模型稱為 $\theta_Q^{'}$，用來取代原本的 $\theta_Q$。
-
-假設所有的文件為集合 $D$，其中包含了文件 (已經過第一次檢索排序後) ${d_1, d_2, ..., d_n, ...}$，因此虛擬相關的文件為 ${d_1, d_2, ..., d_m, ..., d_M}$，而 $M$ 是虛擬相關文件的總數。每一篇文件中的詞都可以看作是由背景語言模型 (Background Language Model) $\theta_b$ 產生，或是由新的查詢詞模型 $\theta_Q^{'}$ 產生，$\alpha_{d_m}$是$d_m$這篇文件中詞彙由 $\theta_Q^{'}$ 產生的機率，反之 $(1-\alpha_{d_m})$ 則是由背景模型 $\theta_b$ 產生的機率。透過最大概似估計最大化下式即可以估計出
-$\theta_Q^{'}$ 和每一篇 $d_m$ 的 $\alpha_{d_m}$：
-
-\begin{equation}
-\label{equ:chap2_prf_f1}
-F_1(\theta_Q^{'}, \alpha_{d_1}, ..., \alpha_{d_M}) = \Pi^M_{m=1} \Pi_w (\alpha_{d_m} P(w|\theta_Q^{'}) + (1 - \alpha_{d_m}) P(w|\theta_b))^{P(w|\theta_{d_m})}
-\end{equation}
-
-上式中，產生詞彙 $w$ 的機率為 $\alpha_{d_m} P(w|\theta_Q^{'}) + (1-\alpha_{d_m}) P(w|\theta_b)$ 。因此上式可視為由新的查詢詞模型產生這些虛擬相關文件的可能性 (Likelihood)。然而，如果只最大化式~\ref{equ:chap2_prf_f1}，$\theta_Q^{'}$ 中主要會包含這些虛擬相關文件的主題，而不一定是查詢詞相關的詞彙，為了要解決這個問題，比較好的方法是用原本的查詢詞模型 $\theta_Q$ 正規化 (Regularize) $\theta_Q^{'}$，因此定義 $F_2(\theta_Q^{'})$ 如下：
-
-\begin{equation}
-\label{equ:chap2_prf_f2}
-F_2(\theta_Q^{'}) = \Pi_w P(w|\theta_Q^{'})^{P(w|\theta_Q)}
-\end{equation}
-
-當 $\theta_Q^{'}$ 與 $\theta_Q$ 越近時，$F_2(\theta_Q^{'})$的值會越大。
-
-有了式~\ref{equ:chap2_prf_f1}和式~\ref{equ:chap2_prf_f2}後，只要最大化下式即可估計 $\theta_Q^{'}$ 和 $\alpha_{d_m}$ ：
-
-\begin{equation}
-\label{equ:chap2_prf_f1f2}
-F(\theta_Q^{'}, \alpha_{d_1}, ..., \alpha_{d_M}) = F_1(\theta_Q^{'}, \alpha_{d_1}, ..., \alpha_{d_M}) F_2(\theta_Q^{'})^\lambda
-\end{equation}
-
-$\lambda$ 是個用來控制 $F_2(\theta_Q^{'})$ 影響力的參數，$\lambda$ 越大，新的查詢詞模型 $\theta_Q^{'}$ 就會跟原本的查詢詞模型 $\theta_Q$ 越像。最大化式~\ref{equ:chap2_prf_f1f2} 的好處是新的查詢詞不會過適 (Overfit) 到虛擬文件，而會保留與原本的查詢詞模型 $\theta_Q$ 一定程度的相似性。	
-
-最大化式 ~\ref{equ:chap2_prf_f1f2} 可以採用 EM 演算法 (Estimation-Maximization Algorithm)：
-
-E step: 對於${d_1, d_2, ..., d_M}$ 中的每篇文件$d_m$中的每一個詞彙 $w$：
-
-\begin{equation}
-\label{equ:chap2_prf_estep}
-P(R|w, d_m) = \frac{\alpha_{d_m} P(w|\theta_Q^{'})}{\alpha_{d_m} P(w|\theta_Q^{'}) + (1-\alpha_{d_m}) P(w|\theta_b)}
-\end{equation}
-
-其中 $P(R|w, d_m)$ 為當給定文件 $d_m$ 中的詞彙 $w$ 時，此文件 $d_m$ 中的詞彙 $w$ 與查詢詞是語意上相關的機率。 
-
-M step： 對於 ${d_1, d_2, ..., d_M}$ 中的每篇文件 $d_m$，其中每篇語音文件 $d_m$ 的語言模型 (使用詞單位) 為 $\theta_d$：
-
-\begin{equation}
-\label{equ:chap2_prf_mstep}
-\alpha_{d_m} = \sum_w P(R|w, d_m)P(w|\theta_d)
-\end{equation}
-
-對每個詞彙 $w$：
-
-\begin{equation}
-P(w|\theta_Q^{'}) = \frac{\lambda P(w|\theta_Q)+\sum^M_{m=1} P(w|\theta_d) P(R|w, d_m)}{\lambda + \sum_w \sum^M_{m=1} P(w|\theta_d) P(R|w, d_m)}
-\end{equation}
-
-重覆地執行 E Step 和 M Step 即可得到新的查詢詞模型 $\theta_Q^{'}$
-
-\subsubsection{文件擴展 (Document Expansion)}
-\label{sec:doc_exp}
-這裡使用潛藏語意分析來進行文件擴展，潛藏語意分析使用了一組潛藏主題變數 (Latent Topic Variables) ${Z_t, t = 1, 2, ..., T}$ ，其中 $T$ 是主題 (Topics) 的數目。所以當給定了所有的語音文件，潛藏語意分析訓練後就能夠提供 $P(w|Z_t)$，即在給定每一個潛藏主題 $Z_t$ 下看到詞 $w$ 的機率，與 $P(Z_t|d)$，即對於每一篇文件 $d$ 的潛藏主題分布 (Topic Distributions)。因此根據潛藏主題分析所得之 $P(w|Z_t)$ 和 $P(Z_t|d)$，可以估計出在每篇文件 $d$ 中出現詞 $w$ 的機率為：
-
-\begin{equation}
-P_{plsa}(w|d) = \sum_{t=1}^T P(w|Z_t)P(Z_t|d)
-\end{equation}
-
-其中 $P(w|Z_t)$和 $P(Z_t|d)$ 的訓練過程是藉由 EM 演算法來最大化下式的目標函數：
-
-\begin{equation}
-\label{equ:plsa_obj}
-L=\sum_{d \in \mathcal{C}} \sum_w P(w|\theta_d) \log P_{plsa}(w|d)
-\end{equation}
-
-其中 $\theta_d$ 是語音文件 $d$ 的語言模型，式 ~\ref{equ:plsa_obj} 可以視為是尋找一組 $P(w|Z_t)$ 和 $P(Z_t|d)$ 使得語音文件的語言模型 $\theta_d$ 與 $P_{plsa}(w|d)$ 的 KL 分歧度最小。 
-
-得到 $P_{plsa}(w|d)$ 後，我們就可以利用 $P_{plsa}$ 為每一篇語音文件 $d$ 產生一組新的背景語言模型，而這套新的背景語言模型是基於它的潛藏主題產生的。如下式所示，新的背景語言模型是將$P_{plsa}(w|d)$與原本的背景語言模型$\theta_b$進行線性疊加所得：
-\begin{equation}
-P(w|\theta_b^d) = b_dP_{plsa}(w|d) + (1-b_d)P(w|\theta_b)
-\end{equation}
-
-其中 $b_d$ 是根據每一篇語言文件所得的疊加權重，定義為 $\frac{L_d}{L_d+b}$，$L_d$ 是文件 $d$ 的長度，$b$ 為一常數。接著當系統在計算查詢詞 $Q$ 與每一篇文件 $x$ 的相關性 $S(Q, x)$ 時，即可使用新的 $\theta_b^d$ 當作 $d$ 的背景語言模型來作平滑化，如~\ref{subsec:retrievalsystem} 中所示，如此一來，經過平滑化的 $\theta_d$ 即會與 $d$ 的主題呈高度的相關，即達到我們想要將與文件 $d$ 概念上相同的詞加入的目的。
-
-\section{自動習得之聲學組型}
-\label{sec:chap2_ap}
-近年來，如何尋找非監督式的信號組型 (Unsupervised Signal Pattern) 是很熱門的研究主題之一，這些信號組型可以被應用於語音數位內容分類、口述語彙偵測、音樂檢索、影片檢索和語音數位內容檢索等等，但尚未被用於語音數位內容的語意檢索。
-
-本論文中使用一套自動習得之聲學組型 (Automatically Discovered Acoustic Patterns) ，是一套兩層式 (Two-level) 的聲學組型，一層是類似詞單位的聲學組型 (Word-like acoustic patterns) (以下稱類詞聲學組型)，另一層是類似次詞單位的聲學組型 (Subword-like acoustic patterns) (以下稱類次詞聲學組型)，其中類詞聲學組型是由一連串的類次詞聲學組型組合而成，並得到一套辭典 (Lexicon) 用以表示類詞聲學組型是如何由類次詞聲學組型組合而成的，也同時得到類詞聲學組型的語言模型。每個類次詞聲學組型都是訓練成一個隱藏式馬可夫模型 (Hidden Markov Model, HMM)，所有的參數包括類次詞聲學組型的隱藏式馬可夫模型的參數、類次詞聲學組型的數目、類詞聲學組型的數目和類詞聲學組型的$N$連語言模型的參數都是自動地在非監督式的情形下從目標語料集習得的。
-
-整套聲學組型的訓練可以主要可以分為四個步驟：初始化、聲學最佳化、語言最佳化、詞彙最佳化；在每個階段結束後，對每個聲音片段都會有一套假定的標識符 (Label) $W_i$，並在每一個階段中進行最佳化的動作後產生新假定的標識符 $W_{i+1}$ 後進入下一個階段：
+深度類神經網路是目前機器學習重要的一個分支。曾經在1980年代蓬勃發展，但因計算代價太高、和其他簡單的模型，如支撐向量機(Support
+Vector Machine)的興起而一度沒落。深層學習的概念由辛氏（Geoffrey Hinton）於2006重新推出~\cite{hinton2006fast}，並使用一種新型的訓練方法，能夠有效提升訓練的執行速度；加上圖形處理器（Graphics
+Processing
+Unit，GPU）大幅提高了數值和矩陣運算的速度。使得深層類神經網路重新成為機器學習領域中的重要角色。
+\subsection{運作原理}
+類神經網路的架構如圖~\ref{fig:ch2_DNN}，其結構由多層感知器（Perceptron)~\ref{fig:ch2_math_neuron}串接而成，因此深層類神經網路又稱為多層感知器（Multi-layer
+Perceptron，MLP）。每一層根據所在位置可分為三類：
 \begin{itemize}
-\itemsep -2pt %reduce space between items
-  \item  初始化 (Initialization)：初始化採用的是由上而下的方法，先將語句利用能量 (Energy) 上的不連續點切成類詞的片段，並在這些類詞片段上進行 Watershed 轉換~\cite{DBLP:conf/interspeech/JansenCH10}，如圖~\ref{fig:chap2_watershed}，將其切成數個類次詞的片段。接著在這些類次詞的片段上抽取特徵，並進行 $K$ 平均分群演算法，之後給每一個群標注不同的標識符 (ID)，稱為 $W_0$，如此一來即可得到最原始的聲學組型，此時類詞聲學組型如何由類次詞組成的關係也決定了最原始的辭典。
-  \item  聲學最佳化 (Acoustic Optimization)：此階段中，會使用上一個階段產生的 $W_i$ 訓練隱藏式馬可夫模型，從$W_i$中也可以得到一套辭典用以表示類詞聲學組型如何由類次詞聲學組型組合而成，有了聲學模型和辭典後，就可以辨識 (Decode) 出新的標識符 $W_{i+1}$ 進入下一個階段。
-  \item  語言最佳化 (Lingustic Optimization)：此階段和前一階段十分類似，唯一的差別是在此用前一階段的標識符 $W_i$ 估算了一組類詞聲學組型的$N$連語言模型用在辨識當中，並辨識成新的標識符 $W_{i+1}$ ，這個$N$連語言模型能幫助辨識出更好的 $W_{i+1}$ ，特別是在類詞聲學組型常常重覆出現的情況下。
-  \item  詞彙最佳化 (Lexical Optimization)：此階段用來建立新的類詞聲學組型，首先將原有的類詞聲學組型都拆散成類次詞聲學組型，並重新尋找適合組合成類詞聲學組型的類次詞聲學組型串列，尋找的方法主要是找到某一串類次詞聲學組型其左和右的上下文變化 (left and right context variation) 夠大，並且出現足夠多次，則這一串類次詞聲學組型就會被組合成新的類詞聲學組型，而這個過程可以使用 PAT 樹在原有的標識符 $W_i$ 上訓練而成。新的辨識結果標識為 $W_{i+1}$。
-
-結束以上的訓練過程後，我們就可以得到聲學組型的聲學模型、語言模型與辭典，於是這套聲學/語言模型與辭典可以被用來建立一套聲學組型辨識器 (Acoustic Pattern Decoder)，並藉由這個辨識器將聲音辨識成聲學組型的唯一最佳序列以供後面的實驗使用。
-
+\item    輸入層(Input Layer): 即為類神經網路輸入特徵向量（Feature Vector）$\bold{X} = [x_1 , x_2 , x_3 , x_4 ... , x_N]^T$
+\item    隱藏層(Hidden Layer): 類神經網路的主要部分，可以有很多層，且每層的感知器（神經元）數目可以不同。
+\item    輸出層(Output Layer): 跟隱藏層很相似，不過會依據模型的目的有所改變。譬如回歸問題，此時輸出層就不會經過活化函數。對於分類問題，輸出層的數量會跟標記種類（Class）相同。
 \end{itemize}
 
-\begin{figure}
+每個感知器都包含了一組加權係數跟偏移量(Bias)，跟非線性的活化函數（Activation
+Function）。數學式如下：
+\begin{equation}
+	y_i = \phi{(\sum_{i=1}^{M} w_{ij},x_i+b_j) } , i = 1,...,N
+\end{equation}
+
+其中$\phi$是活化函數，$w_{ij}$是第$j$個感知器中，對應到第i個輸入$x_i$的加權係數，$b_j$是
+第$j$個感知器的偏移量。$\phi$括號內的特徵轉換稱為仿射變換（Affine
+Transformation）。可將之想像為一個從$M$維實數空間映射到$N$維實數空間的函數$A:
+R^M \rightarrow R^N$，其中$M$和$N$分別是輸入向量$x$與輸出向量$y$的維度。由於仿
+射變換可看成是一個線性矩陣的轉換，複雜度並不夠高，因此我們引入$\phi$這個非線性的活化函數。常見的活化函數分別為Ｓ型函數（Sigmoid）和整流線性單元（Rectified Linear Unit, ReLU）。
+\begin{equation}
+sigmoid(x) = \frac{1}{1 + e^{-x}}
+\end{equation}
+\begin{equation}
+ReLU(x) = max( 0 , x )
+\end{equation}
+
+
+\subsection{訓練類神經網路}
+深層類神經網路常見的訓練方法為反向傳播演算法（Back Propagation）\cite{rumelhart1988learning}，通常要搭配一些最佳化演算法（Optimization Method）例如梯度下降法（Gradient Decent）。
+其概念為模型會計算出當下錯誤的程度，並依照可以減少錯誤的方向更改參數。為了定義錯誤的程度，需借用到損失函數（Loss
+Function）來定義錯誤，其訓練的目標可以規劃為以下的最佳化問題（Optimization
+Problem）:
+\begin{equation}
+\min_{\theta}{ \sum_{n=1}^{N}{ {L( \bold{x}_n , \bold{y}_n ,\theta)}}}
+\end{equation}
+損失函數通常是要能夠反應在你預想的輸出跟模型的輸出的真實距離。損失函數的值越大，代表模型的輸出結果與期望目標相
+差越遠，也因此訓練的目標為最小化損失函數，所以定義一個好的損失函數是很重要的。
+
+以多類別分類器為例，分類器的輸出$\hat{\bold{y}}$，會將每一個維度對應到一個分類標籤，共有$C$種類別。屬於正確標籤的$\bold{y}$表示為一個獨一餘零（1-hot）的向量$[0, 0 , ... , 0 , 1 , 0 ... , 0]^T $，只有正確類別 $l$ 的值是1，其餘為0。訓練此種分類器時，損失函數常為交叉熵（Cross Entropy, CE），定義為：
+\begin{equation} 
+\label{eq:LCE}
+L_{CE}(\bold{x} , \bold{y} , \theta) = KL( \bold{y} || f_{\theta}(\bold{x}) ) = KL(\bold{y} || \hat{\bold{y} }) = \sum_{i = 1}^{C} y_i \log{ \frac{y_i}{\hat{y}_i} } = - \log \hat{y}_{l} 
+\end{equation}
+其中$KL(p||q)$代表的是克雷散度（Kullback–Leibler Divergence），用以衡量兩組機率分佈的距離，值越大則代表兩組分佈越不相似。$L_{CE}(\bold{x} , \bold{y} , \theta) $計算了分類器的正確標籤$\bold{y}$與通過模型參數後的預測向量$\hat{\bold{y}}$的克雷散度，但由於$C$種正確標籤中，只有一個類別$l$的值為1，也因此$L_{CE}(\bold{x} , \bold{y} , \theta) $可以簡化成公式\ref{eq:LCE}最右邊的簡單型態，最小化正確分類標籤的負對數可能性（Negative Log Likelihood, NLL）。
+
+以多類別回歸器而言，則更廣義地希望將回歸器的輸出向量$\hat{\bold{y}}$與目標向量$\bold{y}$的距離拉近。訓練此種分類器時，距離的衡量通常為均方差（Mean Square Error, MSE），定義為：
+\begin{equation}
+L_{MSE}(\bold{x} , \bold{y} , \theta) = || \bold{y} - f_{\theta}(\bold{x}) ||_2 = || \bold{y} - \hat{\bold{y}} ||_2 = \sum_{i = 1}^{C} ( y_i - \hat{y}_i )^2 
+\end{equation}
+
+當設計者決定好損失函數後，下一步是選擇解決最佳化問題的演算法。理想上，理想參數應能夠最小化損失函數：
+\begin{equation}
+\theta^* = \arg\min_{\theta}{ \sum_{n=1}^{N}{ {L( \bold{x}_n , \bold{y}_n , \theta)}}}
+\end{equation}
+
+但因類神經網路中間含有非線性活化函數的緣故，最小化損失函數通常沒有解析解（Analytical
+Solution），或稱封閉解（Close-form Solution）。實務面上，通常採用迭代式（Iterative）演算法，給定一個參數起點，一步一步減少損失函數。
+最簡單的迭代式最佳化演算法為統計式梯度降低（Stochastic Gradient Descent, SGD）演算法，給定某一組參數$\theta$，損失函數沿著該參數上的梯度方向更新，下降的速度最快，可表達成：
+\begin{equation}
+\theta_{k+1} \leftarrow \theta_k - \eta \Delta \theta_{k} 
+\end{equation}
+\begin{equation}
+\Delta \theta_{k} = \frac{\partial L}{\partial \theta} \biggr|_{\theta = \theta_k}
+\end{equation}
+其中$\eta$為學習率（Learning rate），調控最佳化的速度與精細度，$k$為更新的迭代次數，隨著$k$的增加，可期望損失函數的值越來越小，模型越接近理想模型。
+
+
+在使用SGD訓練深度類神經網路的時候，通常是使用反向傳播（Back
+Propagation）演算法，在模型完成順向預測（Forward
+Prediction）計算出$\hat{\bold{y}}$後，會先得到最後一層參數的梯度值，再根據鏈鎖律（Chain-rule），將梯度反向傳播回輸入層，取得每一層的參數的梯度值，從而完成更新。
+
+
+\subsection{類神經網路的困難}
+\begin{itemize}
+\item{局部最佳解（Local Optimum）}
+
+	使用最佳化演算法訓練類神經網路的時候，沒有任何方法可以保證損失函數是下凹（Convex）的。在損失函數下降的過程中，並不保證會下降到最佳解（Global Optimum） 上，很有可能會停在局部最佳解上。因此在訓練之初通常使用隨機初始化，並且擴增模型的隨機性，以避免掉落到結果較差的局部最佳解上。
+
+同時梯度的計算牽扯到函數的一次微分，對於雜訊的反應較不穩健，訓練上不穩定。更進階的訓練方式包含了慣量（Momentum），使得每次SGD更新的時候，包含了前次更新的梯度方向，可表達為：
+\begin{equation}
+\Delta \theta_{k} =  \mu \Delta \theta_{k-1} + \frac{\partial L}{\partial \theta} \biggr|_{\theta = \theta_k}
+\end{equation}
+其中$\mu$為慣量係數，用以調控慣量的比例，來降低卡在局部最佳解上的機率。
+\item{過度貼合（Overfitting）}
+	
+	機器學習常會遇到過度貼合（Overfitting）的問題，亦即模型在訓練資料表現越來越好，但在測試資料中損失函數越變越差。模型為了在訓練資料中表現好，而是將所有訓練資料背誦，無法學習到真正幫助分類與回歸的本質，導致因此模型的概括化（Generization）下降。常見的避免過度貼和的方法為正規化（Regularization）跟丟棄演算法（Dropout）~\cite{srivastava2014dropout}。
+	
+	正規化的目的在於減弱模型的複雜度，也就是對於模型參數大小做限制，即是是在原本的損失函數中，加入$||\theta||_p$如\ref{eq:L2}：
+\begin{equation}
+\label{eq:L2}
+\min_{\theta}{ \sum_{n=1}^{N}{ {L( \bold{x}_n ,\bold{y}_n,\theta)}}+\lambda||\theta||_p^p}
+\end{equation}
+
+\begin{equation}
+\label{eq:norm}
+||\theta||_p = ( \sum_{\theta_i \in \bold{\theta}}{|\theta_i|^p} )^\frac{1}{p}
+\end{equation}
+其中$||\theta||_p$ 稱為$L^p$範數 ($L^p$ norm) ， λ 則是一個介於 0 到 1 之間的係數。
+
+	丟棄演算法（dropout），在每次訓練中，模型內每個神經元會有$p$的機率直接被丟棄，使得輸出值為0，如圖\ref{fig:ch2_drop1}和\ref{fig:ch2_drop2}。藉由隨機丟棄，可以讓模型中的各種參數自力更生，使模型學到更概括化的能力。
+
+\begin{figure}[hb]
 \centering
-\includegraphics[scale=0.3]{images/chap2_watershed.png}
-\caption{在類詞片段上進行的Watershed轉換，紅線部分為可能的次詞邊界} \label{fig:chap2_watershed}
+\subfloat[][未經丟棄的DNN]{\includegraphics[scale=0.25]{images/ch2_DNN.png}\label{fig:ch2_DNN_no_drop}}
+\subfloat[][隨機丟棄的DNN]{\includegraphics[scale=0.25]{images/ch2_dropout1.png}\label{fig:ch2_drop1}}
+\subfloat[][隨機丟棄的DNN]{\includegraphics[scale=0.25]{images/ch2_dropout2.png}\label{fig:ch2_drop2}}
+\caption{丟棄演算法}
+\end{figure}
+	丟棄演算法同時也可以視為隨機整合（Random Ensemble）模型。整合模型
+	（Ensemble
+	Model）在機器學習領域已經被證明是非常強大的模型，藉由多個模型的多樣性（Diversity）各司其職，提昇模型強度。類比在丟棄演算法中，根據
+	不同的丟棄情況，有不同的神經元組合互相整合而成。隨機性造就了多樣性，又
+	同時控制調適，使得模型更不容易過度貼合。
+
+\end{itemize}
+\section{遞迴式類神經網路}
+\subsection{簡介}
+類神經網絡已經是非常強大的模型，但對它而言，每次輸入都是獨立的，它並不記得曾經有過什麼樣的
+輸入。這樣的類神經網絡對於有時序性（Sequencial），且有上下文關係（Context
+Dependency）的輸入時，例如語音辨識(Speech Recognition)和自然語言理解(Naturl
+Language Understanding)，便無法表現得太好。因此讓類神經網路加上記憶的能力，即為遞迴式類神經網路（Recurrent
+Neural Network）~\cite{elman1990finding}。
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{images/ch2_RNN.png}
+\caption{遞迴式類神經網路架構圖} \label{fig:ch2_RNN}
+\end{figure}
+\subsection{運作原理}
+	圖~\ref{fig:ch2_RNN}為模型架構，$NN$為一組類神經網路，$x_t,o_t,h_t$為時間點t的輸入、輸出跟記憶。透過記憶細胞，類神經網路能夠將之前輸入的資訊往後傳遞，並且影響後面的輸出。如下式\ref{eq:h_t}，\ref{eq:o_t}。
+\begin{equation}
+\label{eq:h_t}
+h_t = \phi_h{(W_h x_t+U_h h_{t-1}+b_h)}
+\end{equation}
+\begin{equation}
+\label{eq:o_t}
+o_t = \phi_o{(W_o h_t+b_o)}
+\end{equation}
+記憶$h_t$會跟時間 $t$ 的輸入 $x_t$ 與上個時間點的記憶 $h_{t-1}$ 影響。
+其中$W_h,W_o,U_h,b_o,b_h$為遞迴式類神經網路的參數，$\phi_h,\phi_o$為活化函數。
+
+
+
+\subsection{沿時間反向傳播演算法}
+沿時間反向傳播演算法 (back propagation through time)~\cite{werbos1990backpropagation}
+的概念跟反向傳播演算法類似，其唯一不同的是每個時間的梯度（Gradient)會沿著時間往前傳，如圖\ref{fig:ch2_BPTT}
+紅色的梯度和綠色的梯度都會一直往前傳，更新模型的參數。實務上，須根據所設定的展開時間層數，往前傳播，且訓練
+後個時間點的隱藏層與隱藏層間的權重矩陣將取平均，以讓個時間點的權重相同。
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{images/ch2_BPTT.png}
+\caption{沿時間反向傳播演算法的示意圖} \label{fig:ch2_BPTT}
 \end{figure}
 
-
-\section{遞迴式類神經網路語言模型}
-\subsubsection{模型結構}
-如圖 ~\ref{fig:chap5_rnn_structure} 所示，遞迴式類神經網路語言模型主要可以分為三個層級：
-\begin{figure}
-\centering
-\includegraphics[scale=0.3]{images/chap5_rnn_structure.png}
-\caption{遞迴式類神經網路語言模型示意圖} \label{fig:chap5_rnn_structure}
-\end{figure}
-
-1. 輸入層 (Input Layer)：是一個與辭典大小同長度的陣列，採用的是1-of-N編碼 (1-of-N Encoding)形式，輸入為前一個詞在辭典裡的索引 $w(t)$，而只有該索引的位置的值為一，其餘皆為零。
-
-2. 輸出層 (Output Layer)：同樣是一個與辭典大小同長度的陣列，也是採用1-of-N編碼形式，代表的是該模型對下一個字出現機率分布的預測 $y(t)$。
-
-3. 潛藏層 (Hidden Layer)：或稱上下文層(Context Layer)，通常維度較小，代表的是該時間點此模型保存的上下文資訊 $s(t)$。此層與輸入層、輸出層各有一組權重矩陣 (Weight Matrix) ，$\mathcal{U}$和$\mathcal{V}$，與上一個時間點的潛藏層向量 $s(t-1)$ 也存在一組權重矩陣 $\mathcal{W}$，其用意是為了模擬上下文間的相依關係。
-
-有了以上三層與矩陣後，可以將輸入層、潛藏層及輸出層的關係表示如下：
-
-\begin{equation}
-s(t) = f(\mathcal{U}\times w(t) + \mathcal{W}\times s(t-1))
-\end{equation}
-
-\begin{equation}
-y(t) = g(\mathcal{V}\times s(t))
-\end{equation}
-
-其中的$f(\cdot)$和$g(\cdot)$分別為邏輯函式 (Logistic Function) 與 Soft-Max 函式：
-
-\begin{equation}
-f(z) = \frac{1}{1+e^{-z}}
-\end{equation}
-
-\begin{equation}
-g(z_m) = \frac{e^{z_m}}{\sum_k e^{z_k}}
-\end{equation}
-
-\subsubsection{最佳化演算法-沿時間反向傳播}
-沿時間反向傳播的核心精神是基於反向傳播演算法 (Back Propagation) 而來，反向傳播演算法是訓練類神經網路 (Neural Network) 的最佳化演算法，而反向傳播演算法主要的步驟包含了以下三個部分：
-
-1. 給定一筆訓練範例 (Training Example) 及現階段的模型參數組合，從輸入層向輸出層做順向傳遞 (Forward Pass) ，輸出現階段模型的預測結果 $y_j$，$0<j<|V|$。
-
-2. 根據第一步中模型的輸出結果 $y_j$，與真正的結果 $d_j$ 間計算誤差值，在語言模型中誤差函數 (Error Function) 為交叉熵 (Cross Entropy)：
-
-\begin{equation}
-\label{equ:chap5_error_function}
-E = \sum_j d_j \log{y_j}
-\end{equation}
-
-3. 根據第二步算出來的誤差函數，計算其一階倒數 (First Derivative)，調整進來的權重 (Incoming Weight)，並重複將這個誤差訊號利用連鎖法則 (Chain Rule) 往前傳遞，直到傳回輸入層為止。
-
-假設$y_j$與$z_j$分別是輸出節點$j$的輸出訊號與輸入訊號，$y_i$是潛藏節點 $i$ 的輸出訊號。其中$y_j=f(z_j)$經過一個激活函數 (Activation Function) $f(\cdot)$轉換。假設已知誤差函數為式 ~\ref{equ:chap5_error_function}，我們就可以計算它對$y_j$的一次偏微$\frac{\partial E}{\partial y_j} = \frac{d_j}{y_j}$，根據連鎖法則，即可推得：
-
-\begin{equation}
-\frac{\partial E}{\partial z_j} = \frac{\partial E}{\partial y_j} \frac{y_j}{z_j} = f^{'}(z_j) \frac{\partial E}{\partial y_j}
-\end{equation}
-
-且：
-\begin{equation}
-\frac{\partial E}{\partial y_i} = \sum_j \frac{\partial E}{\partial z_j} \frac{\partial z_j}{\partial y_i} = \sum_j w_{ij} \frac{\partial E}{\partial z_j}
-\end{equation}
-
-故我們可以推得誤差函數 $E$ 對權重 $w_{ij}$ 的一階導數：
-
-\begin{equation}
-\frac{\partial E}{\partial w_{ij}} = \frac{\partial E}{\partial z_j} \frac{\partial z_j}{\partial w_{ij}} = y_i \frac{\partial E}{\partial z_j} 
-\end{equation}
-
-而此值就被拿來當作梯度下降法 (Gradient Decent) 中更新權重 $w_{ij}$ 的依據。
-
-沿時間反向傳播演算法~\cite{boden2002guide}是由反向傳播演算法而來，其唯一不同之處是在做模型訓練之前，必須根據所設定的展開時間層數，將潛藏層往前展開 $N$ 層，圖 ~\ref{fig:chap5_bptt}
-中顯示的是將潛藏層往前展開三層的結果。展開之後其實相當於訓練兩個前饋式類神經網路，一為圖中的上半部，包含輸出層、原始潛藏層及輸入層，另一為圖中的下半部，包含所有沿時間展開的潛藏層及其對應的輸入層。另一方面，由於模型有隱含序列的特性，因此在訓練的過程中必須保持序列的順序一筆一筆餵入作訓練。訓練後各時間點的潛藏層與潛藏層間的權重矩陣將被取平均，以讓各時間點的權重相同。
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.5]{images/chap5_bptt.png}
-\caption{將潛藏層向前展開三層的示意圖} \label{fig:chap5_bptt}
-\end{figure}
+\subsection{長短期記憶神經網路}
+隨著輸入序列的長度加長，遞迴神經網路無法記得一開始的資訊，同時跟人類一樣，我們不需要記憶每個時間點的資訊，只需要記憶關鍵的資訊。因此更近一步提出一種進階形式：長短期記憶網路（Long Short-term Memory
+Network）\cite{gers2001long}，是一種特殊的遞迴神經網路，能夠彌補之前的缺點。
+長短期記憶網路，比一般遞迴神經網路來得複雜，在每個時間點，這組神經網路會有一個單元狀態（Cell
+State），並使用三個被稱作門限（Gate）的機制來輔助管理、移除、以及新增資訊。\cite{shen2016}
 
 \section{本章總結}
 本章介紹了資訊檢索的背景，包含了基礎的資訊檢索架構、口述語彙偵測與語意檢索的差別，以及相關回饋的基本概念，並介紹了語音檢索系統的兩個主要的部分：辨識系統與檢索系統，最後介紹了動態時間校準做為口述語彙偵測的方法。
