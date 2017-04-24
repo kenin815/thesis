@@ -1,0 +1,18 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 資訊檢索系統基本架構\relax }}{6}{figure.caption.4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 片段式動態時間校準示意圖\nobreakspace {}\cite {zhang2009unsupervised}\relax }}{9}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces 示意如何從兩個對角片段中找到相關分數最大的假設區域，其中 $R=2$\relax }}{11}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces 準確率、召回率和平均準確率之關係\relax }}{12}{figure.caption.10}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces 類神經網路的單顆神經元\relax }}{14}{figure.caption.13}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces 基本深度類神經網路架構圖\relax }}{14}{figure.caption.14}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces 丟棄演算法\relax }}{19}{figure.caption.15}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces 遞迴式類神經網路架構圖\relax }}{20}{figure.caption.16}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces 沿時間反向傳播演算法的示意圖\relax }}{21}{figure.caption.17}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces 長短期記憶網路的示意圖\cite {shen2016}\relax }}{22}{figure.caption.18}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces 遺忘門限的運作圖\cite {shen2016}\relax }}{23}{figure.caption.19}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces 輸入門限的運作圖\cite {shen2016}\relax }}{23}{figure.caption.20}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces 更新單元狀態的運作圖\cite {shen2016}\relax }}{24}{figure.caption.21}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces 輸出門限的運作圖\cite {shen2016}\relax }}{25}{figure.caption.22}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 遞迴式類神經網路\relax }}{26}{figure.caption.23}

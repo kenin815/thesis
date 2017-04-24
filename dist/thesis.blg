@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: dist/thesis.aux
+The style file: IEEEbib.bst
+Database file #1: thesis_bib.bib
+Warning--entry type for "shen2016" isn't style-file defined
+--line 23 of file thesis_bib.bib
+Warning--I'm ignoring shen2016's extra "title" field
+--line 27 of file thesis_bib.bib
+Warning--I'm ignoring shen2016's extra "author" field
+--line 31 of file thesis_bib.bib
+Warning--empty journal in robertson1997probability
+Warning--empty year in robertson1997probability
+Warning--empty journal in garofolo2000trec
+Warning--empty year in garofolo2000trec
+Warning--empty year in rumelhart1988learning
+You've used 28 entries,
+            1838 wiz_defined-function locations,
+            617 strings with 8127 characters,
+and the built_in function-call counts, 7198 in all, are:
+= -- 686
+> -- 255
+< -- 11
++ -- 97
+- -- 69
+* -- 522
+:= -- 1047
+add.period$ -- 34
+call.type$ -- 28
+change.case$ -- 27
+chr.to.int$ -- 0
+cite$ -- 33
+duplicate$ -- 342
+empty$ -- 716
+format.name$ -- 69
+if$ -- 1673
+int.to.chr$ -- 0
+int.to.str$ -- 28
+missing$ -- 25
+newline$ -- 141
+num.names$ -- 27
+pop$ -- 103
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 192
+stack$ -- 0
+substring$ -- 522
+swap$ -- 127
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 74
+width$ -- 30
+write$ -- 303
+(There were 8 warnings)
