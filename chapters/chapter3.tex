@@ -4,13 +4,154 @@ Classification），會希望系統能夠給予一個介於 0～1 的分數（�
 
 
 \section{利用遞迴式神經網路的查詢詞特徵向量表示法}
+\subsection{抽取聲學特徵}
+對於語音文件，必須先抽取相關的特徵以便進行語音檢索，常見的聲學特徵為梅爾倒頻譜係數，其作法為會從聲音訊號中切成互相重疊的音框（Frame），藉由重疊音框，來降低邊界雜訊的影響。對於每個音框進行離散傅立葉轉換（Discrete
+Fourier Transform）。再來經過由模擬人耳所設計出的梅爾濾波組（Mel-Filter
+Bank），可得到$20$維向量，每一維度代表各頻率的能量。下一步，進行離散餘弦轉換（Discrete
+Cosine Transform, DCT），可以視為視為一種反離散傅立葉轉換（Inverse Discrete Fourier Transform,
+IDFT），將訊號重頻率軸拉回類似時間軸的空間中，變為$12$維的向量，再加上音框中總體訊號能量列入最後一維，則每個音框變成$13$維的特徵向量。
+
+上述所算出的$13$維向量，會經過一階差分以及二階差分，轉變為$39$維的特徵向量，即為常見的39維MFCC。接著，使用倒頻譜平均數與變異數正規化法（Cepstral
+Mean and Variance
+Normalization,CMVN），將每一維度的參數平均值變為$0$，變異數變為$1$，如此能夠抵抗雜訊的干擾。數學式如\ref{CMVN}：
+
+\begin{equation}
+\begin{aligned}
+X_{CMVN}[n] = \frac{ X[n] - \mu_x }{ \sigma_x } ,n = 1,2,...,N
+\\
+\\
+\mu_{x} = \frac{1}{N} \sum_{n=1}^N {X[n]}, \sigma_x = \sqrt{\frac{1}{N}\sum_{n=1}^N{ (X[n] -\mu_{x} )^2}}
+\end{aligned}
+\label{CMVN}
+\end{equation}
+其中$X[n],n= 1, 2, ...,N$，為音框的倒頻譜係數，經過正規化的係數為$X_{CMVN}[n],n =
+1,2,...,N$，$\mu_x$ 為音框參數的平均數，$\sigma_x$ 為音框參數的標準差。
+
+藉由上述的方法，可以將語音文件跟語音查詢詞，抽出其對應的聲學特徵。
+\subsection{序列對序列模型（Sequence-to-Sequence Model）\cite{sutskever2014sequence}}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{images/ch3_RNN.png} 
-\caption{遞迴式類神經網路}
-\label{ch3_RNN}
+\includegraphics[scale=0.5]{images/ch3_seq2seq.png} 
+\caption{序列對序列模型}
+\label{ch3_seq2seq}
 \end{figure}
-遞迴式類神經網路因其有記憶性，每個時間點的輸出，會依據之記憶跟現在時間點的輸入改變，如圖~\ref{ch3_RNN}所示。所以依照其特性，可以將語音文件一一給入模型中，在最後的時間點的輸出，可以當做模型已經看過整個語音文件，產生的語音特徵向量。此想法跟序列對序列模型（Sequence-to-Sequence
-Model）~\cite{sutskever2014sequence} 的編碼器（encoder）的概念相同，在機器翻譯（Machine
-Translation）和自動摘要（Summarization）裡是很常見的模型。在機器翻譯中，會先將欲翻譯的文字先經編碼器（遞迴式類神經網路）編碼成向量。在自動摘要中，也會將整篇文章先經過編碼器變成向量。
+遞迴式類神經網路因其有記憶性，每個時間點的輸出，會依據之記憶跟現在時間點的輸入改變。所以依照其特性，可以將語音文件一一給入模型中，在最後的時間點的輸出，可以當做模型已經看過整個語音文件，產生的語音特徵向量。此想法跟序列對序列模型的概念相同，如圖~\ref{ch3_seq2seq}所示。
 
+序列對序列模型有兩個部分，分別為編碼器（Encoder）跟解碼器（Decoder），由兩個不同的遞迴類神經網路所組成，編碼器會先將輸入$X$依序讀過，跟先前的遞迴神經網路有點不同，會忽略編碼器的輸出，因為其目的是為了將輸入$X$依序看過轉變成為一個維度固定的隱藏狀態（Hidden
+State）。解碼器則將編碼器的隱藏狀態當做初始，在每個時間點會依據隱藏狀態跟上個時間點的輸出產生出此時的輸出，產生解碼器此時的輸出，在最一開始的輸入，解碼器的輸入為零向量（Zero
+Vector），如圖上的$0$。此種模型在機器翻譯（Machine
+Translation）和自動摘要（Summarization）裡是很常見。在機器翻譯中，會先將欲翻譯的文字先經編碼器轉換成向量，再透過解碼器產生翻譯的文字。在自動摘要中，會將整篇文章先經過編碼器變成向量，利用解碼器輸出文章的摘要內容。
+
+藉此可以將查詢詞跟語音文件藉由編碼器將原本為一連串的序列轉變成單一個隱藏狀態，再藉由最後一個時間點的輸出來代表文件或查詢詞的特徵向量表示，如圖\ref{ch3_RNNVC}。
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{images/ch3_RNNVC.png} 
+\caption{遞迴類神經網路之向量表示}
+\label{ch3_RNNVC}
+\end{figure}
+
+\section{系統架構}
+\subsection{系統概觀}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{images/ch3_system.png} 
+\caption{系統概念圖}
+\label{ch3_system}
+\end{figure}
+本章節所提出的口語詞彙架構如圖\ref{ch3_system}所示。主要為兩個部分，第一部分為特徵抽取，將查詢詞跟語音文件利用前述的方式進行聲學特徵抽取，抽取出$39$維梅爾倒頻譜係數。第二部分為遞迴類神經網路模型，將聲學特徵給入模型，最後模型會給予每個文件分數，來判定文件中是否出現查詢詞，此模型將在\ref{rnn_model}做介紹。
+\subsection{遞迴類神經網路模型}
+\label{rnn_model}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.4]{images/ch3_RNN_model_g.png} 
+\caption{遞迴類神經網路模型圖}
+\label{ch3_RNN_model}
+\end{figure}
+圖\ref{ch3_RNN_model}為整個模型的架構圖，分為兩個部分，一個為遞迴類神經網路的編碼器，一個為類神經網路的分類器。編碼器負責將查詢詞跟語音文件分別由藉由它們的聲學特徵編碼成代表的向量特徵，類神經網路藉由向量特徵給予此文件一個分數。編碼器為前述\ref{LSTM}的長短期記憶網路(LSTM)，且圖上的兩個編碼器參數是相同的。最後類神經網路分類器為前述\ref{DNN}的深層類神經網路，因此時口述詞彙偵測問題被視為分類問題，模型最後的輸出為兩維，一維代表查詢詞出現在文件當中的分數，一維則是未出現的分數，最後會在經過正規化，使兩維分數相加為$1$。
+
+\subsection{訓練方式}
+訓練類神經網路，需要先定義出損失函數。損失函數使用先前\ref{ch2_train_DNN}章提到交叉熵，來進行訓練。簡化的交叉熵為式子\ref{eq:ch3_LCE}
+\begin{equation} 
+\label{eq:ch3_LCE}
+L_{CE}(\bold{x} , \bold{y} , \theta) = KL( \bold{y} ||\hat{\bold {y}} )  = - \log \hat{y}_{l} 
+\end{equation}
+其中KL為克雷散度，$\hat{y}_{l}$為模型給正確標籤的分數。在最小化損失函數的同時，也就將正確標籤的分數提高，使模型能夠分類越準確。整個模型的訓練採用端對端訓練（End-to-End
+Training），亦即不需要獨立訓練編碼器的部分，直接由輸出端的梯度變化，向後傳遞藉此訓練編碼器，如圖\ref{ch3_RNN_model}紅色箭頭所表示，則不須費心在編碼器產生的向量品質好壞，完全交由模型自動訓練跟判斷。
+\section{實驗結果與分析}
+\subsection{實驗設定}
+ 實驗語料採用LIBRISPEECH~\cite{panayotov2015librispeech}的英文語料，這是使用LibriVox的應用程式介面（LibriVox's
+ API)收集參加讀者的閱讀訊息、音頻及閱讀書籍的章節。語料庫的內容大小不同，利用華爾街日報（The
+ Wall Street Journal,
+ WSJ）~\cite{paul1992design}語料庫裡的Si-84當作訓練語料，訓練出語音辨識模型，根據此模型測試的詞錯誤率（Word
+ Error
+ Rate,WER）大約分成三個子集合，分別為100小時、360小時與500小時。前兩組語料為詞錯誤率較小的集合，故以clean稱之，其中每位講者時間限制為25分鐘以避免權重不平衡，此兩個語料集合口音較接近美式英語，而最後500小時為詞錯誤率較高則以other稱之。表\ref{table:ex_info}提供了Librispeech的集合資訊。
+ \begin{table}[ht]
+	 \caption{Librispeech 集合列表}
+	 \label{table:ex_info}
+ \begin{tabular}[t]{|l|l|l|l|l|l|}
+	 \hline
+	 集合 & 時間（hr） & 講者時數（min) &女性講者人數&男性講者人數&總講者\\
+	 \hline
+	 train-clean-100   & 100.6   & 25 & 125 & 126 & 251 \\
+	 \hline
+	 train-clean-360   & 363.6   & 25 & 439 & 482 & 921 \\
+	 \hline
+	 train-other-500   & 496.7   & 30 & 564 & 602 & 1166 \\
+	 \hline
+ \end{tabular}
+ \end{table}
+ 
+ 本篇論文將train-clean-360 當作訓練語料，將train-other-500
+ 當作測試語料。利用TF-IDF（Term Frequency–inverse Document
+ Frequency）分別對訓練和測試語料做排序，訓練語料中選出500個查詢詞，109,220筆的訓練資料，測試語料30個查詢詞，2,000筆測試資料。且限制語音文件的長度為15秒，語音查詢詞的長度為2秒。
+\subsection{基準實驗}
+本章所使用的基準實驗為前述\ref{sec:chap4_sdtw}章所提到的片段式動態時間校準，利用動態時間校準可以計算出查詢詞聲學特徵跟語音文件聲學特徵的最相關的距離。依照此距離來將文件進行排序，計算平均準確率。基準實驗在測試語料上獲得的平均準確度為$0.6173$。
+\subsection{實驗結果與分析}
+ \begin{table}[ht]
+	 \centering
+	 \caption{遞迴類神經網路實驗結果}
+
+	 \label{table:ch3_exp}
+	 \begin{tabular}{|c|c|c|}
+		 \hline
+		 \multicolumn{2}{|c|}{模型架構} & 平均準確率 \\
+		 \hline
+		 \multicolumn{2}{|c|}{基準實驗} & 0.6173 \\
+		 \hline
+		 \hline 
+
+		 編碼器 & 類神經網路結構 & 平均準確率  \\
+		 \hline
+
+		 \multirow{3}{*}{兩層LSTM} & 128-2 & 0.5753\\
+		 \cline{2-3}
+		 & 128-64-32-2 & 0.5935 \\
+		 \cline{2-3}
+		 & 128-128-128-2 & 0.6076\\
+		 \hline
+		 \multirow{2}{*}{三層LSTM} & 128-64-32-2 & 0.5950 \\
+		 \cline{2-3}
+		 & 128-128-128-2 & 0.6025 \\
+		 \hline
+
+		 \multirow{2}{*}{兩層GRU} &  &  \\
+		 \cline{2-3}
+		 &  &  \\
+		 \hline
+		 \multirow{2}{*}{三層GRU} &  &  \\
+		 \cline{2-3}
+		 &  &  \\
+		 \hline
+	   \end{tabular}
+ \end{table}
+
+表\ref{table:ch3_exp}為本章的實驗結果，比較了各模型與基準實驗的表現，使用平均準確率來做衡量標準。在本章的編碼器採用了兩種遞迴類神經細胞，一種為\ref{LSTM}章介紹的長短期記憶細胞（LSTM），另一種記憶細胞為門閘遞迴單元（Gated
+Recurrent Unit,
+GRU）~\cite{cho2014learning}，是長短期記憶細胞的簡化版。輸入門限和遺忘門限是連動的，當遺忘門限關閉清除儲存內容時，輸入門限才會開啟儲存新的資料。編碼器的記憶細胞數量為128，也就是語音文件跟查詢詞經由編碼器產生出128維度的向量表示。類神經網路分類器的部分採用了各種結構如表\ref{table:ch3_exp}上所示，以128-64-32-2
+來說，類神經網路的架構即為第一層128個類神經元，第二層64個，第三層32個，最後一層為2個。
+
+從表中可以看出類神經網路128-2的表現，相比於其他128-128-128-2、128-64-32-2結構，少了2\%的平均準確率，因深層的模型可以有效提高分類正確率，在相同的編碼器架構下。綜觀所有模型，平均準確率大約落在0.6，仍無法贏過基準實驗的0.6173。因模型僅僅簡單的將語音文件轉化成一個向量，可能無法充分表示此語音文件，語音文件不只有一個詞而是一整段句子，語音文件向量會遺失掉某些詞的資訊。即使分類器在強大，仍無法準確檢索出來。
+\section{本章總結}
+本章使用了遞迴類神經網路來產生出語音文件跟查詢詞的單一特徵向量表示，由於遞迴類神經網路有著序列順序前後關係及空間的不變性，可以有效的將序列的語音文件，描述成一個單一向量表示。分別產生代表語音文件跟查詢詞的向量表示後，再藉由多層類神經網路分類器來判斷查詢詞出現與否。
+雖然本章的模型都仍然輸給基準實驗，但本章提出了一個基本的檢索模型，無須經過語音辨識系統，在聲學特徵上進行檢索。

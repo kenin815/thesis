@@ -9,10 +9,13 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces 丟棄演算法\relax }}{19}{figure.caption.15}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces 遞迴式類神經網路架構圖\relax }}{20}{figure.caption.16}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces 沿時間反向傳播演算法的示意圖\relax }}{21}{figure.caption.17}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces 長短期記憶網路的示意圖\cite {shen2016}\relax }}{22}{figure.caption.18}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces 長短期記憶細胞的示意圖\cite {shen2016}\relax }}{22}{figure.caption.18}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces 遺忘門限的運作圖\cite {shen2016}\relax }}{23}{figure.caption.19}
 \contentsline {figure}{\numberline {2.12}{\ignorespaces 輸入門限的運作圖\cite {shen2016}\relax }}{23}{figure.caption.20}
 \contentsline {figure}{\numberline {2.13}{\ignorespaces 更新單元狀態的運作圖\cite {shen2016}\relax }}{24}{figure.caption.21}
 \contentsline {figure}{\numberline {2.14}{\ignorespaces 輸出門限的運作圖\cite {shen2016}\relax }}{25}{figure.caption.22}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 遞迴式類神經網路\relax }}{26}{figure.caption.23}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 序列對序列模型\relax }}{28}{figure.caption.23}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 遞迴類神經網路之向量表示\relax }}{28}{figure.caption.24}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 系統概念圖\relax }}{29}{figure.caption.25}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 遞迴類神經網路模型圖\relax }}{30}{figure.caption.26}

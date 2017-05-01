@@ -3,69 +3,72 @@
 \subsection{資訊檢索}
 
 
-資訊檢索 (Information Retrieval,IR)
-是指從資料庫中擷取出與某個主題(Topic)相關之檢索對象(Object)的行為。基本使用流程為：使用者輸入了一段查詢對象$Q$(Query),系統能夠從資料庫中傳回和這個主題相關的檢索對象(Object)，並進一步依據檢索對象和主題的相關程度進行排序(Ranking)，以方便使用者瀏覽並取得所需的檢索對象。如圖\ref{fig:ch2_IR}。
+資訊檢索 （Information Retrieval,IR）
+是指從資料庫中擷取出與某個主題（Topic）相關之檢索對象（Object）的行為。基本使用流程為：使用者輸入了一段查詢對象$Q$（Query）,系統能夠從資料庫中傳回和這個主題相關的檢索對象（Object），並進一步依據檢索對象和主題的相關程度進行排序（Ranking），以方便使用者瀏覽並取得所需的檢索對象。如圖\ref{fig:ch2_IR}。
 \begin{figure}
 \centering
 \includegraphics[scale=0.4]{images/ch2_Ir.png}
 \caption{資訊檢索系統基本架構} \label{fig:ch2_IR}
 \end{figure}
 
-檢索對象 $x$ 指的是系統所檢索出的東西，例如：在文字搜尋中檢索對象指的是文章、在網路檢索中指的是網頁、在圖像檢索指的是圖片、在語音檢索指的是口語片段 (Spoken Segment)等，同時，查詞對象 $Q$ 也可以為圖片、文字或聲音。
+檢索對象 $x$
+指的是系統所檢索出的東西，例如：在文字搜尋中檢索對象指的是文章、在網路檢索中指的是網頁、在圖像檢索指的是圖片、在語音檢索指的是口語片段（Spoken Segment）等，同時，查詞對象 $Q$ 也可以為圖片、文字或聲音。
 本篇論文中所使用的查詢詞 $Q$ 形式有二：文字構成的字串、口述形式。本篇論文使用 $x$ 則都是語音文件。
 
-當有了查詢對象，系統的主要任務就是去計算相關性(Relevance)，其定義為 $P(R|x,Q)$ ，然後依此機率大小對檢索對象進行排序，這個排序方式
-被稱為機率排序原則 (Probability Ranking Principle,PRP)\cite{robertson1997probability}
-這個相關性函式通常是按照檢索系統的需求去決定的，可以是用機器學習(Machine
-learning)的方法學習出來，也可以是由系統設計者決定。上述的方法可以視為一個分類問題(Classfication)，另一種方法為排序學習(Learning
-to Rank)，此時系統不在需要計算 $P(R|x,Q)$ ，而是尋找一個排序函式(Ranking Function)
+當有了查詢對象，系統的主要任務就是去計算相關性（Relevance），其定義為 $P(R|x,Q)$ ，然後依此機率大小對檢索對象進行排序，這個排序方式
+被稱為機率排序原則 （Probability Ranking Principle,PRP）\cite{robertson1997probability}。
+這個相關性函式通常是按照檢索系統的需求去決定的，可以是用機器學習（Machine
+learning）的方法學習出來，也可以是由系統設計者決定。上述的方法可以視為一個分類問題（Classfication），另一種方法為排序學習（Learning
+to Rank），此時系統不在需要計算 $P(R|x,Q)$，而是尋找一個排序函式（Ranking Function）
 $S(x,Q)$，能夠將$ S(x_T,Q)>s(x_F,Q)$， $x_T$ 為相關的檢索對象、 $x_F$
 為不相關的檢索對象。也就是說，所有相關的檢索對象，都能夠超過不相關的檢索對象。
 
 如何檢驗一個資訊系統的好壞也是重要的課題首先我們必須要準備測試集，其中包含文件資料庫、查詢詞、以及與每個查詢詞對應的相關文件的標註。藉由評估系統在測試集上於「正確度」、「速度」、以及「佔用空間」等數個面向的表現，以了解此系統與其他系統的優劣比較。
 
-文字檢索會議 (The Text REtrieval
-Conference,TREC)，自1992年起每年的居舉行會議，並在多個測試項目上提供大規模之標準測試集，藉此讓來自世界各地的參加團隊評估自己的系統效益同時與其他團隊相互討論切磋。如今，TREC除英文的檢索測試集外，更提供了非英文的大規模檢索測試集
-(如西班牙文與中文)、語音檢索測試集、以及跨語言檢索測試集。另外在測試項目上也有了多樣的發展，包括引入了開放領域自動問答
-(Open-Domain Question Answering)以及基於內容的數位影音檢索 (Content-based Retrieval of Digital Video)
+文字檢索會議 （The Text REtrieval Conference,TREC），自1992年起每年的居舉行會議，並在多個測試項目上提供大規模之標準測試集，藉此讓來自世界各地的參加團隊評估自己的系統效益同時與其他團隊相互討論切磋。如今，TREC除英文的檢索測試集外，更提供了非英文的大規模檢索測試集
+（如西班牙文與中文）、語音檢索測試集、以及跨語言檢索測試集。另外在測試項目上也有了多樣的發展，包括引入了開放領域自動問答
+（Open-Domain Question Answering）以及基於內容的數位影音檢索
+（Content-based Retrieval of Digital Video）
 等。資訊檢索已是一門受到關注的領域。
 
 
 
 \subsection{語音資訊檢索}
-目前語音檢索可以分為兩類，「口述語彙偵測 (Spoken Term Detection)」與「語意檢索 (Semantic Retrieval)」，本論文著重在口述詞彙偵測，在
+目前語音檢索可以分為兩類，「口述語彙偵測 （Spoken Term Detection）」與「語意檢索 （Semantic Retrieval）」，本論文著重在口述詞彙偵測，在
 ，此將兩者簡介如下：
 
 \subsubsection{口述語彙偵測}
 
 
-口述語彙偵測的目的是檢索出所有包含查詢詞的語音文件，著重於逐詞比對(Literal Term Matching) ，主要有兩種檢索情境。第一種是先將語音文件辨識為詞圖(Lattice)
-後，當使用者輸入文字的查詢詞後，系統會在詞圖上進行查詢詞的檢索。這種檢索情境需要有訓練好的自動語音辨識系統
-(Automatic Speech Recognition,
-ASR)，由於語音辨識系統並無法保證在所有情況下都有很好的辨識率，因此由辨識錯誤所導致的檢索性能下降是在此最需要解決的問題。過去的文獻有用聲學特徵如梅爾倒頻譜係數
-(Mel-Frequency Cepstral Coefficients (MFCC)) 幫助分類器 (Classifier)
-在分類一篇語音文件是否相關時的判斷，也有利用相關回饋 (Relevance Feedback)、圖論 (Graph) 與隨機漫步 (Random Walk)
+口述語彙偵測的目的是檢索出所有包含查詢詞的語音文件，著重於逐詞比對（Literal
+Term
+Matching），主要有兩種檢索情境。第一種是先將語音文件辨識為詞圖（Lattice）後，當使用者輸入文字的查詢詞後，系統會在詞圖上進行查詢詞的檢索。這種檢索情境需要有訓練好的自動語音辨識系統（Automatic Speech Recognition,ASR），由於語音辨識系統並無法保證在所有情況下都有很好的辨識率，因此由辨識錯誤所導致的檢索性能下降是在此最需要解決的問題。過去的文獻有用聲學特徵如梅爾倒頻譜係數
+（Mel-Frequency Cepstral Coefficients （MFCC））幫助分類器 （Classifier）
+在分類一篇語音文件是否相關時的判斷，也有利用相關回饋 （Relevance Feedback）、圖論 （Graph）與隨機漫步 （Random Walk）
 解決這些問題。
 
 第二種是非監督式
-(Unsupervised)，的方法，查詢詞與語音文件都是語音形式的，也有人稱之為依例查詢
-(Query-by-Example)，系統直接利用如動態時間校準 (Dynamic Time Warping)
-等方法在信號上比對語音文件中是否有某一段聲音與查詢詞很相像，過去的方法通常是為了解決不同文件間語速上的差異提出如有斜率限制的動態時間校準
-(Slope-Constraint DTW)，或是為了解決動態時間校準逐一比對所有文件庫所花時間過多的問題。計算此情境下的 $S(Q, x)$ 為利用片段式動態時間規劃 (Segmental Dynamic Time Warping)，簡介於~\ref{sec:chap4_sdtw}。
+（Unsupervised），的方法，查詢詞與語音文件都是語音形式的，也有人稱之為依例查詢
+（Query-by-Example），系統直接利用如動態時間校準（Dynamic Time Warping）
+等方法在信號上比對語音文件中是否有某一段聲音與查詢詞很相像，過去的方法通常是為了解決不同文件間語速上的差異提出如有斜率限制的動態時間校準（Slope-Constraint
+DTW），或是為了解決動態時間校準逐一比對所有文件庫所花時間過多的問題。計算此情境下的
+$S(Q, x)$ 為利用片段式動態時間規劃 （Segmental Dynamic Time Warping），簡介於~\ref{sec:chap4_sdtw}。
 
 \subsubsection{語意檢索}
-語意檢索的目的為回傳概念上相關的語音文件，而不一定要出現查詢詞。希望查詢結果與輸入的查詢詞是概念上匹配
-(Concept
-Matching)的，而不是只回傳有出現查詢詞的文件，如當使用者查詢「美國總統」，文件中包含「美國總統」、「美國白宮」，而不是與查詢詞完全一樣的文件，通常也是使用者想要的。文字領域的資訊檢索已經有「概念匹配」的做法來達到語意檢索，但是由於文字領域的資訊檢索是在文字為完全正確的狀況下，不像語音數位文件的檢索往往會有辨識錯誤的問題。對於語音文件，一個較常見的實作方法通常是使用相關回饋
-(Relevance Feedback)~\cite{ruthven2003survey} 與查詢詞擴展 (Query
-Expansion)~\cite{voorhees1994query,xu1996query}。
+語意檢索的目的為回傳概念上相關的語音文件，而不一定要出現查詢詞。希望查詢結果與輸入的查詢詞是概念上匹配（Concept
+Matching）的，而不是只回傳有出現查詢詞的文件，如當使用者查詢「美國總統」，文件中包含「美國總統」、「美國白宮」，而不是與查詢詞完全一樣的文件，通常也是使用者想要的。文字領域的資訊檢索已經有「概念匹配」的做法來達到語意檢索，但是由於文字領域的資訊檢索是在文字為完全正確的狀況下，不像語音數位文件的檢索往往會有辨識錯誤的問題。對於語音文件，一個較常見的實作方法通常是使用相關回饋（Relevance Feedback）~\cite{ruthven2003survey} 與查詢詞擴展（Query Expansion)~\cite{voorhees1994query,xu1996query}。
 
-\subsection{片段式動態時間校準 (Segmental DTW)}
+\subsection{片段式動態時間校準 （Segmental DTW）}
 \label{sec:chap4_sdtw}
 口述語彙偵測的目的為搜尋整個語料庫後，找出其中有出現查詢詞的語音文件，同時找出這些語音文件中可能有出現查詢詞的假設區域 (Hypothesized Region) ，並給這個假設區域一個相關分數，最後系統再根據相關分數進行排序後回傳給使用者 (分數較高為較相關)。
 
 這裡考慮的口述語彙偵測是查詢詞也是語音形式的情境。此時所用的方法為片段式動態時間校準 (Segmental Dynamic Time Warping)~\cite{chan2010unsupervised, hazen2009query}。假設輸入的查詢詞的特徵為$\mathbf{X} = (\mathbf{x}_1, ..., \mathbf{x}_{|\mathbf{X}|})$，語音文件的特徵為$\mathbf{Y} = (\mathbf{y}_1, ..., \mathbf{y}_{|\mathbf{Y}|})$，有了這兩者之後，就可以建立一個距離表格 (Distance Table) $D(i, j) = \rho(\mathbf{x}_i, \mathbf{y}_j)$，通常這裡使用的特徵是
-高斯事後機率 (Gaussian Posteriorgrams)~\cite{zhang2009unsupervised}或是梅爾倒頻譜係數 (MFCC)。如果使用高斯事後機率的話，兩個音框之間的距離為 $\rho(\mathbf{x}_i, \mathbf{y}_j) \equiv -\log (\mathbf{x}_i \cdot \mathbf{y}_j)$。如果使用梅爾倒頻譜係數的話，兩個音框之間的距離為兩點之間的歐幾里得距離 (Euclidean Distance)，即$\rho(\mathbf{x}_i, \mathbf{y}_j) \equiv \sqrt{|\mathbf{x}_i - \mathbf{y}_j|^2}$
+高斯事後機率 （Gaussian Posteriorgrams）~\cite{zhang2009unsupervised}或是梅爾倒頻譜係數
+（MFCC）。如果使用高斯事後機率的話，兩個音框之間的距離為
+$\rho(\mathbf{x}_i, \mathbf{y}_j) \equiv -\log (\mathbf{x}_i
+\cdot\mathbf{y}_j)$。如果使用梅爾倒頻譜係數的話，兩個音框之間的距離為兩點之間的歐幾里得距離（Euclidean
+Distance），即$\rho(\mathbf{x}_i, \mathbf{y}_j)
+\equiv\sqrt{|\mathbf{x}_i - \mathbf{y}_j|^2}$。
 
 動態時間校準的目的是要在 $D(i, j)$ 上找一條距離總合最短的路徑從 $(1, s)$ 到 $(|\mathbf{X}|, e)$ 表示從 $\mathbf{X}$對應到$(\mathbf{y}_s, ..., \mathbf{y}_e)$ (因為查詢詞一定要被完全對應，而語音文件不一定要被完全對應到)。由於假設區域可以出現在語音文件中的任何地方， 因此片段式動態時間校準將距離表格 $D(i, j)$ 切成數個重疊的對角片段 (寬度為 $R$)，所以說每個片段的起始點分別為 $(1, 1), (1, 1+R), (1, 1+2R),...$ 如圖 ~\ref{fig:chap4_sdtw} 所示，每個對角片段都代表了一個可能出現查詢詞的區域，所以要在每個對角片段上找出距離總合最短的路徑，即這個對角片段上的假設區域。片段式動態時間校準會從每個片段中找出一段距離總合最短的路徑，在每個片段中所有對應的路徑 (Warping Path) 都必須要完整地待在片段內，不可超出片段。
 
@@ -131,7 +134,7 @@ C_{\phi}(\mathbf{X}, \mathbf{Y}) = \sum_{t=1}^{|\phi|} \rho(\mathbf{x}_{i_t},\ma
 
 \begin{figure}
 \centering
-\includegraphics[scale=1.0]{images/chap2_precision_recall.png}
+\includegraphics[scale=0.5]{images/chap2_precision_recall.png}
 \caption{準確率、召回率和平均準確率之關係} \label{fig:precision_recall}
 \end{figure}
 
@@ -158,6 +161,7 @@ MAP = \frac{1}{|Q|} \sum_Q \frac{\sum_{d \in D^R}precision(d)}{|D^R|}
 
 
 \section{深層類神經網路（Deep Neural Network, DNN）}
+\label{DNN}
 \subsection{簡介}
 深層類神經網路發想於生物的神經系統結構。神經系統由非常多的神經元組成，彼此以樹突、軸突與突觸連結，每顆神經元自己有活化閾值來決定激發
 態與否。根據此仿生的觀察，便產生一種數學模型（如圖~\ref{fig:ch2_bio_neuron}與~\ref{fig:ch2_math_neuron})，將其層層疊起（如圖~\ref{fig:ch2_DNN}），即為深度類神經網路的全貌。
@@ -174,12 +178,12 @@ MAP = \frac{1}{|Q|} \sum_Q \frac{\sum_{d \in D^R}precision(d)}{|D^R|}
 \caption{基本深度類神經網路架構圖} \label{fig:ch2_DNN}
 \end{figure}
 
-深度類神經網路是目前機器學習重要的一個分支。曾經在1980年代蓬勃發展，但因計算代價太高、和其他簡單的模型，如支撐向量機(Support
-Vector Machine)的興起而一度沒落。深層學習的概念由辛氏（Geoffrey Hinton）於2006重新推出~\cite{hinton2006fast}，並使用一種新型的訓練方法，能夠有效提升訓練的執行速度；加上圖形處理器（Graphics
+深度類神經網路是目前機器學習重要的一個分支，曾經在1980年代蓬勃發展，但因計算代價太高，且同時有其他簡單的模型如支撐向量機（Support
+Vector Machine）的興起而沒落。深層學習的概念由辛氏（Geoffrey Hinton）於2006重新推出~\cite{hinton2006fast}，並使用一種新型的訓練方法，能夠有效提升訓練的執行速度；加上圖形處理器（Graphics
 Processing
-Unit，GPU）大幅提高了數值和矩陣運算的速度。使得深層類神經網路重新成為機器學習領域中的重要角色。
+Unit，GPU）大幅提高了數值和矩陣運算的速度，使得深層類神經網路重新成為機器學習領域中的重要角色。
 \subsection{運作原理}
-類神經網路的架構如圖~\ref{fig:ch2_DNN}，其結構由多層感知器（Perceptron)~圖\ref{fig:ch2_math_neuron}串接而成，因此深層類神經網路又稱為多層感知器（Multi-layer
+類神經網路的架構如圖~\ref{fig:ch2_DNN}，其結構由感知器（Perceptron)~圖\ref{fig:ch2_math_neuron}串接而成，因此深層類神經網路又稱為多層感知器（Multi-layer
 Perceptron，MLP）。每一層根據所在位置可分為三類：
 \begin{itemize}
 \item    輸入層(Input Layer): 即為類神經網路輸入特徵向量（Feature Vector）$\bold{X} = [x_1 , x_2 , x_3 , x_4 ... , x_N]^T$
@@ -190,7 +194,7 @@ Perceptron，MLP）。每一層根據所在位置可分為三類：
 每個感知器都包含了一組加權係數跟偏移量(Bias)，跟非線性的活化函數（Activation
 Function）。數學式如下：
 \begin{equation}
-	y_i = \phi{(\sum_{i=1}^{M} w_{ij}x_i+b_j) } , i = 1,...,N
+	y_i = \phi{(\sum_{i=1}^{M} w_{ij}x_i+b_j) }
 \end{equation}
 
 其中$\phi$是活化函數，$w_{ij}$是第$j$個感知器中，對應到第$i$個輸入$x_i$的加權係數，$b_j$是第$j$個感知器的偏移量。$\phi$括號內的特徵轉換稱為仿射變換（Affine
@@ -207,7 +211,10 @@ R^M \rightarrow R^N$，其中$M$和$N$分別是輸入向量$x$與輸出向量$y$
 
 
 \subsection{訓練類神經網路}
-深層類神經網路常見的訓練方法為反向傳播演算法（Back Propagation）\cite{rumelhart1988learning}，通常要搭配一些最佳化演算法（Optimization Method）例如梯度下降法（Gradient Decent）。
+\label{ch2_train_DNN}
+深層類神經網路常見的訓練方法為反向傳播演算法（Back
+Propagation）\cite{rumelhart1988learning}，通常要搭配一些最佳化演算法（Optimization
+Method）例如梯度下降法（Gradient Descent）。
 其概念為模型會計算出當下錯誤的程度，並依照可以減少錯誤的方向更改參數。為了定義錯誤的程度，需借用到損失函數（Loss
 Function）來定義錯誤，其訓練的目標可以規劃為以下的最佳化問題（Optimization
 Problem）:
@@ -332,14 +339,16 @@ Neural Network）~\cite{elman1990finding}。
 \end{figure}
 
 \subsection{長短期記憶神經網路}
+\label{LSTM}
 隨著輸入序列的長度加長，遞迴神經網路無法記得一開始的資訊，同時跟人類一樣，我們不需要記憶每個時間點的資訊，只需要記憶關鍵的資訊。因此更近一步提出一種進階形式：長短期記憶網路（Long Short-term Memory
 Network）\cite{gers2001long}，是一種特殊的遞迴神經網路，能夠彌補之前的缺點。
-長短期記憶網路，比一般遞迴神經網路來得複雜，如圖\ref{fig:ch2_lstm}，在每個時間點，這組神經網路會有一個單元狀態（Cell
+長短期記憶網路，比一般遞迴神經網路來得複雜，將原本的類神經元由長短期記憶細胞（Long
+Short-term Memory Cell）取代，如圖\ref{fig:ch2_lstm}，在每個時間點，這組神經網路會有一個單元狀態（Cell
 State），並使用三個被稱作門限（Gate）的機制來輔助管理、移除、以及新增資訊。以下將會詳細說明各門限及其運作方式。
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.5]{images/ch2_lstm.png}
-\caption{長短期記憶網路的示意圖\cite{shen2016}} \label{fig:ch2_lstm}
+\caption{長短期記憶細胞的示意圖\cite{shen2016}} \label{fig:ch2_lstm}
 \end{figure}
 \begin{itemize}
 \item{遺忘門限（Forget Gate）$f_t$}

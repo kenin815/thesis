@@ -4,55 +4,55 @@ The top-level auxiliary file: dist/thesis.aux
 The style file: IEEEbib.bst
 Database file #1: thesis_bib.bib
 Warning--entry type for "shen2016" isn't style-file defined
---line 23 of file thesis_bib.bib
+--line 75 of file thesis_bib.bib
 Warning--I'm ignoring shen2016's extra "title" field
---line 27 of file thesis_bib.bib
+--line 79 of file thesis_bib.bib
 Warning--I'm ignoring shen2016's extra "author" field
---line 31 of file thesis_bib.bib
+--line 83 of file thesis_bib.bib
 Warning--empty journal in robertson1997probability
 Warning--empty year in robertson1997probability
 Warning--empty journal in garofolo2000trec
 Warning--empty year in garofolo2000trec
 Warning--empty year in rumelhart1988learning
-You've used 28 entries,
+You've used 31 entries,
             1838 wiz_defined-function locations,
-            617 strings with 8127 characters,
-and the built_in function-call counts, 7198 in all, are:
-= -- 686
-> -- 255
-< -- 11
-+ -- 97
-- -- 69
-* -- 522
-:= -- 1047
-add.period$ -- 34
-call.type$ -- 28
-change.case$ -- 27
+            633 strings with 8882 characters,
+and the built_in function-call counts, 8219 in all, are:
+= -- 785
+> -- 300
+< -- 13
++ -- 113
+- -- 82
+* -- 590
+:= -- 1190
+add.period$ -- 39
+call.type$ -- 31
+change.case$ -- 30
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 342
-empty$ -- 716
-format.name$ -- 69
-if$ -- 1673
+cite$ -- 36
+duplicate$ -- 393
+empty$ -- 809
+format.name$ -- 82
+if$ -- 1919
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 25
-newline$ -- 141
-num.names$ -- 27
-pop$ -- 103
+int.to.str$ -- 31
+missing$ -- 28
+newline$ -- 156
+num.names$ -- 30
+pop$ -- 117
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 192
+skip$ -- 227
 stack$ -- 0
-substring$ -- 522
-swap$ -- 127
-text.length$ -- 11
+substring$ -- 594
+swap$ -- 152
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 5
-while$ -- 74
-width$ -- 30
-write$ -- 303
+while$ -- 83
+width$ -- 33
+write$ -- 337
 (There were 8 warnings)
