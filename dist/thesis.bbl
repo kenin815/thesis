@@ -182,4 +182,53 @@ Kyunghyun Cho, Bart Van~Merri{\"e}nboer, Caglar Gulcehre, Dzmitry Bahdanau,
   statistical machine translation,''
 \newblock {\em arXiv preprint arXiv:1406.1078}, 2014.
 
+\bibitem{sukhbaatar2015end}
+Sainbayar Sukhbaatar, Jason Weston, Rob Fergus, et~al.,
+\newblock ``End-to-end memory networks,''
+\newblock in {\em Advances in neural information processing systems}, 2015, pp.
+  2440--2448.
+
+\bibitem{graves2014neural}
+Alex Graves, Greg Wayne, and Ivo Danihelka,
+\newblock ``Neural turing machines,''
+\newblock {\em arXiv preprint arXiv:1410.5401}, 2014.
+
+\bibitem{kumar2015ask}
+Ankit Kumar and Ozan Irsoy,
+\newblock ``Ask me anything: Dynamic memory networks for natural language
+  processing,''
+\newblock .
+
+\bibitem{agrawal2015vqa}
+Aishwarya Agrawal, Jiasen Lu, Stanislaw Antol, Margaret Mitchell, C~Lawrence
+  Zitnick, Devi Parikh, and Dhruv Batra,
+\newblock ``Vqa: Visual question answering,''
+\newblock {\em International Journal of Computer Vision}, pp. 1--28.
+
+\bibitem{rush2015neural}
+Alexander~M Rush, Sumit Chopra, and Jason Weston,
+\newblock ``A neural attention model for abstractive sentence summarization,''
+\newblock {\em arXiv preprint arXiv:1509.00685}, 2015.
+
+\bibitem{xu2015show}
+Kelvin Xu, Jimmy Ba, Ryan Kiros, Kyunghyun Cho, Aaron Courville, Ruslan
+  Salakhudinov, Rich Zemel, and Yoshua Bengio,
+\newblock ``Show, attend and tell: Neural image caption generation with visual
+  attention,''
+\newblock in {\em International Conference on Machine Learning}, 2015, pp.
+  2048--2057.
+
+\bibitem{chan2016listen}
+William Chan, Navdeep Jaitly, Quoc Le, and Oriol Vinyals,
+\newblock ``Listen, attend and spell: A neural network for large vocabulary
+  conversational speech recognition,''
+\newblock in {\em Acoustics, Speech and Signal Processing (ICASSP), 2016 IEEE
+  International Conference on}. IEEE, 2016, pp. 4960--4964.
+
+\bibitem{bahdanau2014neural}
+Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio,
+\newblock ``Neural machine translation by jointly learning to align and
+  translate,''
+\newblock {\em arXiv preprint arXiv:1409.0473}, 2014.
+
 \end{thebibliography}

@@ -59,8 +59,8 @@
 \citation{zhang2009unsupervised}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces 片段式動態時間校準示意圖\nobreakspace  {}\cite  {zhang2009unsupervised}\relax }}{9}{figure.caption.7}}
 \newlabel{fig:chap4_sdtw}{{2.2}{9}{片段式動態時間校準示意圖~\cite {zhang2009unsupervised}\relax }{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces 示意如何從兩個對角片段中找到相關分數最大的假設區域，其中 $R=2$\relax }}{11}{figure.caption.8}}
-\newlabel{fig:chap2_sdtw_exp}{{2.3}{11}{示意如何從兩個對角片段中找到相關分數最大的假設區域，其中 $R=2$\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces 示意如何從兩個對角片段中找到相關分數最大的假設區域，其中 $ R=2 $ \relax }}{11}{figure.caption.8}}
+\newlabel{fig:chap2_sdtw_exp}{{2.3}{11}{示意如何從兩個對角片段中找到相關分數最大的假設區域，其中 $ R=2 $ \relax }{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.4}資訊檢索評估機制}{11}{subsection.2.1.4}}
 \@writefile{toc}{\contentsline {subsubsection}{準確率(Precision)與召回率(Recall)}{11}{section*.9}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces 準確率、召回率和平均準確率之關係\relax }}{12}{figure.caption.10}}
@@ -136,38 +136,81 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {\CJKnumber  {3}、}以遞迴類神經網路之口語詞彙偵測}{26}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{ch3}{{3}{26}{以遞迴類神經網路之口語詞彙偵測}{chapter.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}簡介}{26}{section.3.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}利用遞迴式神經網路的查詢詞特徵向量表示法}{26}{section.3.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}利用遞迴式神經網路的特徵向量表示法}{26}{section.3.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}抽取聲學特徵}{26}{subsection.3.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces 梅爾倒頻譜係數流程圖\relax }}{27}{figure.caption.23}}
+\newlabel{ch3_mfcc}{{3.1}{27}{梅爾倒頻譜係數流程圖\relax }{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces 梅爾濾波組\relax }}{28}{figure.caption.24}}
+\newlabel{ch3_mel_filter}{{3.2}{28}{梅爾濾波組\relax }{figure.caption.24}{}}
 \citation{sutskever2014sequence}
-\newlabel{CMVN}{{3.1}{27}{抽取聲學特徵}{equation.3.2.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}序列對序列模型（Sequence-to-Sequence Model）\cite  {sutskever2014sequence}}{27}{subsection.3.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces 序列對序列模型\relax }}{28}{figure.caption.23}}
-\newlabel{ch3_seq2seq}{{3.1}{28}{序列對序列模型\relax }{figure.caption.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces 遞迴類神經網路之向量表示\relax }}{28}{figure.caption.24}}
-\newlabel{ch3_RNNVC}{{3.2}{28}{遞迴類神經網路之向量表示\relax }{figure.caption.24}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}系統架構}{29}{section.3.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}系統概觀}{29}{subsection.3.3.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces 系統概念圖\relax }}{29}{figure.caption.25}}
-\newlabel{ch3_system}{{3.3}{29}{系統概念圖\relax }{figure.caption.25}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}遞迴類神經網路模型}{29}{subsection.3.3.2}}
-\newlabel{rnn_model}{{3.3.2}{29}{遞迴類神經網路模型}{subsection.3.3.2}{}}
+\newlabel{CMVN}{{3.1}{29}{抽取聲學特徵}{equation.3.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}序列對序列模型（Sequence-to-Sequence Model）\cite  {sutskever2014sequence}}{29}{subsection.3.2.2}}
+\newlabel{seq2seq}{{3.2.2}{29}{序列對序列模型（Sequence-to-Sequence Model）\cite {sutskever2014sequence}}{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces 序列對序列模型\relax }}{30}{figure.caption.25}}
+\newlabel{ch3_seq2seq}{{3.3}{30}{序列對序列模型\relax }{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces 遞迴類神經網路之向量表示\relax }}{31}{figure.caption.26}}
+\newlabel{ch3_RNNVC}{{3.4}{31}{遞迴類神經網路之向量表示\relax }{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}系統架構}{31}{section.3.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}系統概觀}{31}{subsection.3.3.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces 系統概念圖\relax }}{31}{figure.caption.27}}
+\newlabel{ch3_system}{{3.5}{31}{系統概念圖\relax }{figure.caption.27}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}遞迴類神經網路模型}{32}{subsection.3.3.2}}
+\newlabel{rnn_model}{{3.3.2}{32}{遞迴類神經網路模型}{subsection.3.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces 遞迴類神經網路模型圖\relax }}{32}{figure.caption.28}}
+\newlabel{ch3_RNN_model}{{3.6}{32}{遞迴類神經網路模型圖\relax }{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}訓練方式}{32}{subsection.3.3.3}}
+\newlabel{eq:ch3_LCE}{{3.2}{32}{訓練方式}{equation.3.3.2}{}}
 \citation{panayotov2015librispeech}
 \citation{paul1992design}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces 遞迴類神經網路模型圖\relax }}{30}{figure.caption.26}}
-\newlabel{ch3_RNN_model}{{3.4}{30}{遞迴類神經網路模型圖\relax }{figure.caption.26}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}訓練方式}{30}{subsection.3.3.3}}
-\newlabel{eq:ch3_LCE}{{3.2}{30}{訓練方式}{equation.3.3.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}實驗結果與分析}{31}{section.3.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}實驗設定}{31}{subsection.3.4.1}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Librispeech 集合列表\relax }}{31}{table.caption.27}}
-\newlabel{table:ex_info}{{3.1}{31}{Librispeech 集合列表\relax }{table.caption.27}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}實驗結果與分析}{33}{section.3.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}實驗設定}{33}{subsection.3.4.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Librispeech 集合列表\relax }}{33}{table.caption.29}}
+\newlabel{table:ex_info}{{3.1}{33}{Librispeech 集合列表\relax }{table.caption.29}{}}
 \citation{cho2014learning}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}基準實驗}{32}{subsection.3.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}實驗結果與分析}{32}{subsection.3.4.3}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces 遞迴類神經網路實驗結果\relax }}{32}{table.caption.28}}
-\newlabel{table:ch3_exp}{{3.2}{32}{遞迴類神經網路實驗結果\relax }{table.caption.28}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}本章總結}{33}{section.3.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}基準實驗}{34}{subsection.3.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}實驗結果與分析}{34}{subsection.3.4.3}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces 遞迴類神經網路實驗結果\relax }}{35}{table.caption.30}}
+\newlabel{table:ch3_exp}{{3.2}{35}{遞迴類神經網路實驗結果\relax }{table.caption.30}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}本章總結}{36}{section.3.5}}
+\citation{sukhbaatar2015end}
+\citation{graves2014neural}
+\citation{kumar2015ask}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\CJKnumber  {4}、}專注式類神經網路之口述詞彙偵測}{37}{chapter.4}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}簡介}{37}{section.4.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}專注式機制}{37}{section.4.2}}
+\citation{agrawal2015vqa}
+\citation{rush2015neural}
+\citation{xu2015show}
+\citation{chan2016listen}
+\citation{bahdanau2014neural}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}模型架構}{38}{section.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}系統架構簡介}{38}{subsection.4.3.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces 模型架構圖\relax }}{39}{figure.caption.31}}
+\newlabel{ch4_system}{{4.1}{39}{模型架構圖\relax }{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}語音查詢詞之向量表示法}{39}{subsection.4.3.2}}
+\newlabel{ch4_query_vec}{{4.3.2}{39}{語音查詢詞之向量表示法}{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces 專注式機制流程圖\relax }}{40}{figure.caption.32}}
+\newlabel{ch4_att}{{4.2}{40}{專注式機制流程圖\relax }{figure.caption.32}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}專注式機制與語音文件表示法}{40}{subsection.4.3.3}}
+\newlabel{cos_sim}{{4.1}{41}{專注式機制與語音文件表示法}{equation.4.3.1}{}}
+\newlabel{ch4_doc_vec}{{4.3.3}{41}{專注式機制與語音文件表示法}{equation.4.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}分類器}{42}{subsection.4.3.4}}
+\newlabel{ch4_classify}{{4.3.4}{42}{分類器}{subsection.4.3.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}實驗與分析}{42}{section.4.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}本章總結}{42}{section.4.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\CJKnumber  {5}、}非監督式學習語音向量之口語詞彙偵測}{43}{chapter.5}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:chap5}{{5}{43}{非監督式學習語音向量之口語詞彙偵測}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}簡介}{43}{section.5.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}語音向量}{43}{section.5.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}模型架構}{43}{section.5.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}實驗與分析}{43}{section.5.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}本章總結}{43}{section.5.5}}
 \bibstyle{IEEEbib}
 \bibdata{thesis_bib}
 \bibcite{sutskever2014sequence}{1}
@@ -179,7 +222,7 @@
 \bibcite{saraclar2004lattice}{7}
 \bibcite{mamou2006spoken}{8}
 \bibcite{vincent2008extracting}{9}
-\@writefile{toc}{\contentsline {chapter}{參考文獻}{34}{section*.29}}
+\@writefile{toc}{\contentsline {chapter}{參考文獻}{44}{section*.33}}
 \bibcite{li2015hierarchical}{10}
 \bibcite{baldi2012autoencoders}{11}
 \bibcite{mikolov2013distributed}{12}
@@ -202,3 +245,11 @@
 \bibcite{panayotov2015librispeech}{29}
 \bibcite{paul1992design}{30}
 \bibcite{cho2014learning}{31}
+\bibcite{sukhbaatar2015end}{32}
+\bibcite{graves2014neural}{33}
+\bibcite{kumar2015ask}{34}
+\bibcite{agrawal2015vqa}{35}
+\bibcite{rush2015neural}{36}
+\bibcite{xu2015show}{37}
+\bibcite{chan2016listen}{38}
+\bibcite{bahdanau2014neural}{39}

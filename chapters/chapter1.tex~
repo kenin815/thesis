@@ -5,7 +5,7 @@ Search等。隨著錄影音設備的普及，語音文件量正蓬勃地增加�
 
 更由於行動裝置的出現，使用者可以不受地形時間限制，隨時取得資訊，促使許多網路公司一一推出了用語音輸入來檢索文字資訊的系統，如Google
 公司推出的語音檢索功能即可讓使用者在手機或瀏覽器的介面上以語音輸入，由 Google 將其辨識成文字後再於 Google 的搜尋引擎上檢索資訊。 Apple 公司推出的個人語音助理 Siri，也讓使用者能以十分自然的方式對 Siri說出想要查詢的查詢詞（Query），由 Siri 辨識後在網路上檢索，並將檢索結果分門別類整理好後呈現給使用者看。如上述所說的這類檢索系統是用語音輸入的查詢詞去檢索大量的文字資訊，此方法稱為人聲檢索（Voice
-Search），和本論文所探討的語音數位內容檢索 （Spoken Content Retrieval）完全不同。
+Search），和本論文所探討的語音數位內容檢索（Spoken Content Retrieval）完全不同。
 
 本論文所探討的語音數位內容檢索，是指由於網路上有大量的多媒體文件，如線上影片、會議錄音、線上課程、電視連續劇、演講等，而使用者也有搜尋這些多媒體文件的需求，此類允許使用者用文字或聲音輸入查詢詞並搜尋語音數位內容（Spoken Content）的系統稱為語音數位內容檢索，如 TED（美國著名的演講網站）會將網站上的演講內容轉寫（Transcript） 成為文字，並允許使用者於網站上輸入文字檢索這些影片的文字稿。 Youtube 也會於離線時將其網站上的影片辨識成文字，但目前尚不支援直接輸入查詢詞檢索影片轉寫的方式，可以期待未來 Youtube 會開放這方面的功能。只是上述兩個例子仍要倚賴人工的轉寫，要完全只靠機器自動辨識仍不容易做到。這種語音數位內容檢索將是本論文主要的研究主軸。
 
@@ -22,19 +22,19 @@ Learning）大幅提升語音辨識系統的能力，語音辨識仍然是個困
 \begin{itemize}
 \itemsep -2pt %reduce space between items
   \item
-	  傳統的語意檢索系統是先將語音文件辨識為文字後，將輸入的文字查詢詞進行檢索，語音辨識系統的影響會直接反應在搜尋結果上,但自動語音辨識系統（Automatically Speech Recognition）
+	  傳統的語意檢索系統是先將語音文件辨識為文字後，將輸入的文字查詢詞進行檢索，語音辨識系統的影響會直接反應在搜尋結果上，但自動語音辨識系統（Automatically Speech Recognition）
 的訓練是很昂貴的，需要大量標注完善的語料才能訓練出很好的聲學與語言模型。因此，利用類神經網路擁有有良好的推廣性（Generization）
 和適應性（Adaptability）強的優點，直接對於語音信號本身搜索，避免語音辨識的錯誤。
-  \item   更進一步地，由於語音文件無法跟文字文件一樣清楚分段，對於模型來說計算量是很龐大，且充斥著雜訊。因而，引進了畫重點機制
-	  （Attention Mechanism）
-	  ，來使模型能夠將目光注目特定的位置上，減少雜訊的干擾，進而學習出更好的向量表示
-	  （Vector Representation）
   \item
-	  由於學習的向量表示，會過度貼近（Overfit）訓練資料，導致推廣性的下降。使用自動編碼器（auto-encoder）\cite{vincent2008extracting,li2015hierarchical,baldi2012autoencoders}產生文字向量（word2vec）,語音向量（audio2vec）\cite{mikolov2013distributed,mikolov2013efficient,pennington2014glove,chung2016audio}，進而進行搜索。
-  \item   再者，利用了成對學習法 （pairwise
-	  learning）使得原本的分類問題加入了排序（Ranking）的概念，使得系統能夠更加精準的分出正確資料與錯誤資料間的差異，進而提升檢索系統。
+	  更進一步地，由於語音文件無法跟文字文件一樣清楚分段，對於模型來說計算量是很龐大，且充斥著雜訊。因而，引進了專注式機制（Attention
+	  Mechanism），來使模型能夠將目光注目特定的位置上，減少雜訊的干擾，進而學習出更好的向量表示（Vector Representation）
   \item
-	  最後，將上述的模型統整在一起，將語音向量當作正規化（regularization），利用畫重點機制排除多餘雜訊，提升模型的效能，使搜尋結果更加進步。
+	  由於學習的向量表示，會過度貼近（Overfit）訓練資料，導致推廣性的下降。使用自動編碼器（Auto-encoder）\cite{vincent2008extracting,li2015hierarchical,baldi2012autoencoders}
+	  產生文字向量（Word2vec），語音向量（Audio2vec）\cite{mikolov2013distributed,mikolov2013efficient,pennington2014glove,chung2016audio}，進而進行搜索。
+  \item   再者，利用了成對學習法 （Pairwise
+	  Learning）使得原本的分類問題加入了排序（Ranking）的概念，使得系統能夠更加精準的分出正確資料與錯誤資料間的差異，進而提升檢索系統。
+  \item
+	  最後，將上述的模型統整在一起，將語音向量當作正規化（Regularization），利用畫重點機制排除多餘雜訊，提升模型的效能，使搜尋結果更加進步。
 
 \end{itemize}
 
@@ -46,7 +46,7 @@ Learning）大幅提升語音辨識系統的能力，語音辨識仍然是個困
   \item  第二章：介紹本論文相關背景知識。
   \item  第三章：介紹如何以類神經網路實現口述詞彙偵測。
   \item  第四章：介紹如何以畫重點機制類神經網路實現口述詞彙偵測。
-  \item  第五章：介紹如何產生語音向量(audio2vec)跟文字向量(word2vec)，並應用於口述詞彙偵測
+  \item  第五章：介紹如何產生語音向量跟文字向量，並應用於口述詞彙偵測
   \item  第六章：介紹如何以成對學習法訓練檢索系統。 
   \item  第七章：介紹將畫重點機制跟語音向量同時應用在口語詞彙偵測。
   \item  第八章：本論文之結論與未來研究方向。

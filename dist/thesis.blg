@@ -4,55 +4,58 @@ The top-level auxiliary file: dist/thesis.aux
 The style file: IEEEbib.bst
 Database file #1: thesis_bib.bib
 Warning--entry type for "shen2016" isn't style-file defined
---line 75 of file thesis_bib.bib
+--line 191 of file thesis_bib.bib
 Warning--I'm ignoring shen2016's extra "title" field
---line 79 of file thesis_bib.bib
+--line 195 of file thesis_bib.bib
 Warning--I'm ignoring shen2016's extra "author" field
---line 83 of file thesis_bib.bib
+--line 199 of file thesis_bib.bib
 Warning--empty journal in robertson1997probability
 Warning--empty year in robertson1997probability
 Warning--empty journal in garofolo2000trec
 Warning--empty year in garofolo2000trec
 Warning--empty year in rumelhart1988learning
-You've used 31 entries,
+Warning--empty journal in kumar2015ask
+Warning--empty year in kumar2015ask
+Warning--empty year in agrawal2015vqa
+You've used 39 entries,
             1838 wiz_defined-function locations,
-            633 strings with 8882 characters,
-and the built_in function-call counts, 8219 in all, are:
-= -- 785
-> -- 300
-< -- 13
-+ -- 113
-- -- 82
-* -- 590
-:= -- 1190
-add.period$ -- 39
-call.type$ -- 31
-change.case$ -- 30
+            667 strings with 10338 characters,
+and the built_in function-call counts, 10501 in all, are:
+= -- 983
+> -- 418
+< -- 17
++ -- 155
+- -- 116
+* -- 752
+:= -- 1526
+add.period$ -- 48
+call.type$ -- 39
+change.case$ -- 38
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 393
-empty$ -- 809
-format.name$ -- 82
-if$ -- 1919
+cite$ -- 47
+duplicate$ -- 503
+empty$ -- 1012
+format.name$ -- 116
+if$ -- 2446
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 28
-newline$ -- 156
-num.names$ -- 30
-pop$ -- 117
+int.to.str$ -- 39
+missing$ -- 36
+newline$ -- 196
+num.names$ -- 38
+pop$ -- 149
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 227
+skip$ -- 305
 stack$ -- 0
-substring$ -- 594
-swap$ -- 152
-text.length$ -- 13
+substring$ -- 733
+swap$ -- 200
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
-while$ -- 83
-width$ -- 33
-write$ -- 337
-(There were 8 warnings)
+warning$ -- 8
+while$ -- 103
+width$ -- 41
+write$ -- 419
+(There were 11 warnings)

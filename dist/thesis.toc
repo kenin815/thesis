@@ -29,16 +29,32 @@
 \contentsline {section}{\numberline {2.4}本章總結}{25}{section.2.4}
 \contentsline {chapter}{\numberline {\CJKnumber {3}、}以遞迴類神經網路之口語詞彙偵測}{26}{chapter.3}
 \contentsline {section}{\numberline {3.1}簡介}{26}{section.3.1}
-\contentsline {section}{\numberline {3.2}利用遞迴式神經網路的查詢詞特徵向量表示法}{26}{section.3.2}
+\contentsline {section}{\numberline {3.2}利用遞迴式神經網路的特徵向量表示法}{26}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}抽取聲學特徵}{26}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}序列對序列模型（Sequence-to-Sequence Model）\cite {sutskever2014sequence}}{27}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}系統架構}{29}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}系統概觀}{29}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}遞迴類神經網路模型}{29}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}訓練方式}{30}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}實驗結果與分析}{31}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}實驗設定}{31}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}基準實驗}{32}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}實驗結果與分析}{32}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}本章總結}{33}{section.3.5}
-\contentsline {chapter}{參考文獻}{34}{section*.29}
+\contentsline {subsection}{\numberline {3.2.2}序列對序列模型（Sequence-to-Sequence Model）\cite {sutskever2014sequence}}{29}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}系統架構}{31}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}系統概觀}{31}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}遞迴類神經網路模型}{32}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}訓練方式}{32}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}實驗結果與分析}{33}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}實驗設定}{33}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}基準實驗}{34}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}實驗結果與分析}{34}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}本章總結}{36}{section.3.5}
+\contentsline {chapter}{\numberline {\CJKnumber {4}、}專注式類神經網路之口述詞彙偵測}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}簡介}{37}{section.4.1}
+\contentsline {section}{\numberline {4.2}專注式機制}{37}{section.4.2}
+\contentsline {section}{\numberline {4.3}模型架構}{38}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}系統架構簡介}{38}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}語音查詢詞之向量表示法}{39}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}專注式機制與語音文件表示法}{40}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}分類器}{42}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}實驗與分析}{42}{section.4.4}
+\contentsline {section}{\numberline {4.5}本章總結}{42}{section.4.5}
+\contentsline {chapter}{\numberline {\CJKnumber {5}、}非監督式學習語音向量之口語詞彙偵測}{43}{chapter.5}
+\contentsline {section}{\numberline {5.1}簡介}{43}{section.5.1}
+\contentsline {section}{\numberline {5.2}語音向量}{43}{section.5.2}
+\contentsline {section}{\numberline {5.3}模型架構}{43}{section.5.3}
+\contentsline {section}{\numberline {5.4}實驗與分析}{43}{section.5.4}
+\contentsline {section}{\numberline {5.5}本章總結}{43}{section.5.5}
+\contentsline {chapter}{參考文獻}{44}{section*.33}
