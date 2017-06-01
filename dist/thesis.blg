@@ -4,11 +4,11 @@ The top-level auxiliary file: dist/thesis.aux
 The style file: IEEEbib.bst
 Database file #1: thesis_bib.bib
 Warning--entry type for "shen2016" isn't style-file defined
---line 191 of file thesis_bib.bib
+--line 205 of file thesis_bib.bib
 Warning--I'm ignoring shen2016's extra "title" field
---line 195 of file thesis_bib.bib
+--line 209 of file thesis_bib.bib
 Warning--I'm ignoring shen2016's extra "author" field
---line 199 of file thesis_bib.bib
+--line 213 of file thesis_bib.bib
 Warning--empty journal in robertson1997probability
 Warning--empty year in robertson1997probability
 Warning--empty journal in garofolo2000trec
@@ -17,45 +17,45 @@ Warning--empty year in rumelhart1988learning
 Warning--empty journal in kumar2015ask
 Warning--empty year in kumar2015ask
 Warning--empty year in agrawal2015vqa
-You've used 39 entries,
+You've used 40 entries,
             1838 wiz_defined-function locations,
-            667 strings with 10338 characters,
-and the built_in function-call counts, 10501 in all, are:
-= -- 983
-> -- 418
+            671 strings with 10454 characters,
+and the built_in function-call counts, 10647 in all, are:
+= -- 995
+> -- 426
 < -- 17
-+ -- 155
-- -- 116
-* -- 752
-:= -- 1526
-add.period$ -- 48
-call.type$ -- 39
-change.case$ -- 38
++ -- 158
+- -- 118
+* -- 760
+:= -- 1553
+add.period$ -- 49
+call.type$ -- 40
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 503
-empty$ -- 1012
-format.name$ -- 116
-if$ -- 2446
+cite$ -- 48
+duplicate$ -- 510
+empty$ -- 1026
+format.name$ -- 118
+if$ -- 2478
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 36
-newline$ -- 196
-num.names$ -- 38
-pop$ -- 149
+int.to.str$ -- 40
+missing$ -- 37
+newline$ -- 201
+num.names$ -- 39
+pop$ -- 151
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 305
+skip$ -- 309
 stack$ -- 0
 substring$ -- 733
-swap$ -- 200
+swap$ -- 201
 text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 8
-while$ -- 103
-width$ -- 41
-write$ -- 419
+while$ -- 104
+width$ -- 42
+write$ -- 429
 (There were 11 warnings)

@@ -272,7 +272,7 @@ Prediction）計算出 $ \hat{\bold{y}} $ 後，會先得到最後一層參數�
 其中 $ \mu $ 為慣量係數，用以調控慣量的比例，來降低卡在局部最佳解上的機率。
 \item{ 過度貼合（Overfitting）}
 	
-	機器學習常會遇到過度貼合（Overfitting）的問題，亦即模型在訓練資料表現越來越好，但在測試資料中損失函數越變越差。模型為了在訓練資料中表現好，而是將所有訓練資料背誦，無法學習到真正幫助分類與回歸的本質，導致因此模型的概括化（Generization）下降。常見的避免過度貼和的方法為正規化（Regularization）跟丟棄演算法（Dropout）~\cite{srivastava2014dropout}。
+	機器學習常會遇到過度貼合（Overfitting）的問題，亦即模型在訓練資料表現越來越好，但在測試資料中損失函數越變越差。模型為了在訓練資料中表現好，而是將所有訓練資料背誦，無法學習到真正幫助分類與回歸的本質，導致因此模型的推廣性（Generization）下降。常見的避免過度貼和的方法為正規化（Regularization）跟丟棄演算法（Dropout）~\cite{srivastava2014dropout}。
 
 	1. 正規化的目的在於減弱模型的複雜度，也就是對於模型參數大小做限制，即是是在原本的損失函數中，加入 $ ||\theta||_p $ 如\ref{eq:L2}：
 \begin{equation}

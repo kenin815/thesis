@@ -231,4 +231,9 @@ Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio,
   translate,''
 \newblock {\em arXiv preprint arXiv:1409.0473}, 2014.
 
+\bibitem{kingma2014adam}
+Diederik Kingma and Jimmy Ba,
+\newblock ``Adam: A method for stochastic optimization,''
+\newblock {\em arXiv preprint arXiv:1412.6980}, 2014.
+
 \end{thebibliography}
