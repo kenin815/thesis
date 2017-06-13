@@ -119,9 +119,9 @@ Translation）和自動摘要（Summarization）裡是很常見。在機器翻�
 訓練類神經網路，需要先定義出損失函數。損失函數使用先前\ref{ch2_train_DNN}章提到交叉熵，來進行訓練。簡化的交叉熵為式子\ref{eq:ch3_LCE}
 \begin{equation} 
 \label{eq:ch3_LCE}
-L_{CE}(\bold{x} , \bold{y} , \theta) = KL( \bold{y} ||\hat{\bold {y}} )  = - \log \hat{y}_{l} 
+L_{CE}(\bold{x} , \bold{y} , \theta) = KL(\bold{y} || f_{\theta}(\bold{x})) =KL( \bold{y} ||\hat{\bold {y}} )  = - \log \hat{y}_{l} 
 \end{equation}
-其中KL為克雷散度， $ \hat{y}_{l} $ 為模型給正確標籤的分數。在最小化損失函數的同時，也就將正確標籤的分數提高，使模型能夠分類越準確。整個模型的訓練採用端對端訓練（End-to-End
+其中KL為克雷散度，$\bold{y}$為正確答案，$\hat{\bold{y}}$為模型預測的結果，$ \hat{y}_{l} $ 為模型給正確標籤的分數。在最小化損失函數的同時，也就將正確標籤的分數提高，使模型能夠分類越準確。整個模型的訓練採用端對端訓練（End-to-End
 Training），亦即不需要獨立訓練編碼器的部分，直接由輸出端的梯度變化，向後傳遞藉此訓練編碼器，如圖\ref{ch3_RNN_model}紅色箭頭所表示，則不須費心在編碼器產生的向量品質好壞，完全交由模型自動訓練跟判斷。
 \section{實驗結果與分析}
 \subsection{實驗設定}

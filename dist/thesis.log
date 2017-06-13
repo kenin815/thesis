@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.3.22)  1 JUN 2017 20:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.3.22)  12 JUN 2017 23:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1210,7 +1210,14 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \ALC@tlm=\skip68
 \algorithmicindent=\skip69
 )
-(dist/thesis.aux)
+(dist/thesis.aux
+
+LaTeX Warning: Label `ch5_seq2seq' multiply defined.
+
+
+LaTeX Warning: Label `eq:ch5_RMSE' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 170.
@@ -1295,8 +1302,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 170.
 LaTeX Font Info:    ... okay on input line 170.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 170.
 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -1552,8 +1558,26 @@ Package hyperref Info: Reference (link) `subsection.4.4.1' on input line 53.
 Package hyperref Info: Reference (link) `subsection.4.4.2' on input line 54.
 Package hyperref Info: Reference (link) `subsection.4.4.3' on input line 55.
 Package hyperref Info: Reference (link) `subsection.4.4.4' on input line 56.
-Package hyperref Info: Reference (link) `section.4.5' on input line 57.
-Package hyperref Info: Reference (link) `section*.38' on input line 58.
+Package hyperref Info: Reference (link) `subsection.4.4.5' on input line 57.
+Package hyperref Info: Reference (link) `section.4.5' on input line 58.
+Package hyperref Info: Reference (link) `chapter.5' on input line 59.
+Package hyperref Info: Reference (link) `section.5.1' on input line 60.
+Package hyperref Info: Reference (link) `section.5.2' on input line 61.
+Package hyperref Info: Reference (link) `section.5.3' on input line 62.
+Package hyperref Info: Reference (link) `subsection.5.3.1' on input line 63.
+Package hyperref Info: Reference (link) `subsection.5.3.2' on input line 64.
+Package hyperref Info: Reference (link) `section.5.4' on input line 65.
+Package hyperref Info: Reference (link) `subsection.5.4.1' on input line 66.
+Package hyperref Info: Reference (link) `subsection.5.4.2' on input line 67.
+Package hyperref Info: Reference (link) `section.5.5' on input line 68.
+Package hyperref Info: Reference (link) `chapter.6' on input line 69.
+Package hyperref Info: Reference (link) `section.6.1' on input line 70.
+Package hyperref Info: Reference (link) `section.6.2' on input line 71.
+Package hyperref Info: Reference (link) `subsection.6.2.1' on input line 72.
+Package hyperref Info: Reference (link) `subsection.6.2.2' on input line 73.
+Package hyperref Info: Reference (link) `section.6.3' on input line 74.
+Package hyperref Info: Reference (link) `section.6.4' on input line 75.
+Package hyperref Info: Reference (link) `section*.44' on input line 76.
 )
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
@@ -1574,8 +1598,26 @@ Package `hyperref' Info: End of reference (link) `subsection.4.4.1', line 53.
 Package `hyperref' Info: End of reference (link) `subsection.4.4.2', line 54.
 Package `hyperref' Info: End of reference (link) `subsection.4.4.3', line 55.
 Package `hyperref' Info: End of reference (link) `subsection.4.4.4', line 56.
-Package `hyperref' Info: End of reference (link) `section.4.5', line 57.
-Package `hyperref' Info: End of reference (link) `section*.38', line 58.
+Package `hyperref' Info: End of reference (link) `subsection.4.4.5', line 57.
+Package `hyperref' Info: End of reference (link) `section.4.5', line 58.
+Package `hyperref' Info: End of reference (link) `chapter.5', line 59.
+Package `hyperref' Info: End of reference (link) `section.5.1', line 60.
+Package `hyperref' Info: End of reference (link) `section.5.2', line 61.
+Package `hyperref' Info: End of reference (link) `section.5.3', line 62.
+Package `hyperref' Info: End of reference (link) `subsection.5.3.1', line 63.
+Package `hyperref' Info: End of reference (link) `subsection.5.3.2', line 64.
+Package `hyperref' Info: End of reference (link) `section.5.4', line 65.
+Package `hyperref' Info: End of reference (link) `subsection.5.4.1', line 66.
+Package `hyperref' Info: End of reference (link) `subsection.5.4.2', line 67.
+Package `hyperref' Info: End of reference (link) `section.5.5', line 68.
+Package `hyperref' Info: End of reference (link) `chapter.6', line 69.
+Package `hyperref' Info: End of reference (link) `section.6.1', line 70.
+Package `hyperref' Info: End of reference (link) `section.6.2', line 71.
+Package `hyperref' Info: End of reference (link) `subsection.6.2.1', line 72.
+Package `hyperref' Info: End of reference (link) `subsection.6.2.2', line 73.
+Package `hyperref' Info: End of reference (link) `section.6.3', line 74.
+Package `hyperref' Info: End of reference (link) `section.6.4', line 75.
+Package `hyperref' Info: End of reference (link) `section*.44', line 76.
 ]
 Package hyperref Info: Anchor `chapter*.2' on input line 23.
  (dist/thesis.lof
@@ -1603,6 +1645,10 @@ Package hyperref Info: Reference (link) `figure.caption.31' on input line 25.
 Package hyperref Info: Reference (link) `figure.caption.32' on input line 26.
 Package hyperref Info: Reference (link) `figure.caption.36' on input line 27.
 Package hyperref Info: Reference (link) `figure.caption.37' on input line 28.
+Package hyperref Info: Reference (link) `figure.caption.38' on input line 29.
+Package hyperref Info: Reference (link) `figure.caption.40' on input line 31.
+Package hyperref Info: Reference (link) `figure.caption.41' on input line 32.
+Package hyperref Info: Reference (link) `figure.caption.43' on input line 34.
 )
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
@@ -1634,6 +1680,10 @@ Package `hyperref' Info: End of reference (link) `figure.caption.31', line 25.
 Package `hyperref' Info: End of reference (link) `figure.caption.32', line 26.
 Package `hyperref' Info: End of reference (link) `figure.caption.36', line 27.
 Package `hyperref' Info: End of reference (link) `figure.caption.37', line 28.
+Package `hyperref' Info: End of reference (link) `figure.caption.38', line 29.
+Package `hyperref' Info: End of reference (link) `figure.caption.40', line 31.
+Package `hyperref' Info: End of reference (link) `figure.caption.41', line 32.
+Package `hyperref' Info: End of reference (link) `figure.caption.43', line 34.
 ]
 Package hyperref Info: Anchor `chapter*.3' on input line 25.
  (dist/thesis.lot
@@ -1642,6 +1692,8 @@ Package hyperref Info: Reference (link) `table.caption.30' on input line 5.
 Package hyperref Info: Reference (link) `table.caption.33' on input line 7.
 Package hyperref Info: Reference (link) `table.caption.34' on input line 8.
 Package hyperref Info: Reference (link) `table.caption.35' on input line 9.
+Package hyperref Info: Reference (link) `table.caption.39' on input line 10.
+Package hyperref Info: Reference (link) `table.caption.42' on input line 12.
 )
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
@@ -1655,6 +1707,8 @@ Package `hyperref' Info: End of reference (link) `table.caption.30', line 5.
 Package `hyperref' Info: End of reference (link) `table.caption.33', line 7.
 Package `hyperref' Info: End of reference (link) `table.caption.34', line 8.
 Package `hyperref' Info: End of reference (link) `table.caption.35', line 9.
+Package `hyperref' Info: End of reference (link) `table.caption.39', line 10.
+Package `hyperref' Info: End of reference (link) `table.caption.42', line 12.
 ])
 Package hyperref Info: Anchor `chapter.1' on input line 205.
 
@@ -1702,19 +1756,19 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
-Package hyperref Info: Anchor `page.3' on input line 34.
+Package hyperref Info: Anchor `page.3' on input line 37.
 
 [3]
-Overfull \hbox (9.05852pt too wide) in paragraph at lines 37--38
+Overfull \hbox (21.05852pt too wide) in paragraph at lines 37--38
 []\C70/bsmi/m/n/12/67 ^^@ \C70/bsmi/m/n/12/5f � \C70/bsmi/m/n/12/ff ^^L \C70/bs
 mi/m/n/12/5c ^^G \C70/bsmi/m/n/12/4e 
  \C70/bsmi/m/n/12/8f � \C70/bsmi/m/n/12/76 � \C70/bsmi/m/n/12/6a ! \C70/bsmi/m/
 n/12/57 � \C70/bsmi/m/n/12/7d q \C70/bsmi/m/n/12/65 t \C70/bsmi/m/n/12/57 ( \C7
 0/bsmi/m/n/12/4e ^^@ \C70/bsmi/m/n/12/8d w \C70/bsmi/m/n/12/ff ^^L \C70/bsmi/m/
-n/12/5c ^^G \C70/bsmi/m/n/12/8a � \C70/bsmi/m/n/12/97 � \C70/bsmi/m/n/12/54 ^^Q
- \C70/bsmi/m/n/12/91 � \C70/bsmi/m/n/12/75 v \C70/bsmi/m/n/12/4f \ \C70/bsmi/m/
-n/12/6b c \C70/bsmi/m/n/12/89 � \C70/bsmi/m/n/12/53 ^^V \C70/bsmi/m/n/12/ff ^^H
-\OT1/ptm/m/n/12 Regularization\C70/bsmi/m/n/12/ff 	 ^^L
+n/12/5c ^^G \C70/bsmi/m/n/12/8a � \C70/bsmi/m/n/12/97 � \C70/bsmi/m/n/12/8a ^ \
+C70/bsmi/m/n/12/54 ^^Q \C70/bsmi/m/n/12/91 � \C70/bsmi/m/n/12/75 v \C70/bsmi/m/
+n/12/4f \ \C70/bsmi/m/n/12/6b c \C70/bsmi/m/n/12/89 � \C70/bsmi/m/n/12/53 ^^V \
+C70/bsmi/m/n/12/ff ^^H\OT1/ptm/m/n/12 Regularization\C70/bsmi/m/n/12/ff 	 ^^L
  []
 
 Package hyperref Info: Anchor `section.1.3' on input line 41.
@@ -1759,7 +1813,7 @@ Package hyperref Info: bookmark on input line 3:
 (hyperref)             type {toc}.
 Package hyperref Info: Reference (link) `figure.caption.4' on input line 7.
 Package hyperref Info: Anchor `figure.caption.4' on input line 9.
- <images/ch2_Ir.png, id=590, 794.97pt x 517.935pt>
+ <images/ch2_Ir.png, id=694, 794.97pt x 517.935pt>
 File: images/ch2_Ir.png Graphic file (type png)
 
 <use images/ch2_Ir.png>
@@ -1825,7 +1879,7 @@ Package hyperref Info: Anchor `page.8' on input line 75.
  [8]
 Package hyperref Info: Anchor `figure.caption.7' on input line 76.
 
-<images/chap4_sdtw.png, id=622, 1223.57124pt x 745.78625pt>
+<images/chap4_sdtw.png, id=727, 1223.57124pt x 745.78625pt>
 File: images/chap4_sdtw.png Graphic file (type png)
 
 <use images/chap4_sdtw.png>
@@ -1849,14 +1903,14 @@ Package hyperref Info: Anchor `equation.2.1.1' on input line 101.
 Package hyperref Info: Anchor `equation.2.1.1' on input line 101.
 Package hyperref Info: Anchor `figure.caption.8' on input line 105.
 
-<images/chap2_segdtw_exp1.png, id=627, 823.3962pt x 500.5902pt>
+<images/chap2_segdtw_exp1.png, id=732, 823.3962pt x 500.5902pt>
 File: images/chap2_segdtw_exp1.png Graphic file (type png)
 
 <use images/chap2_segdtw_exp1.png>
 Package pdftex.def Info: images/chap2_segdtw_exp1.png used on input line 107.
 (pdftex.def)             Requested size: 329.35265pt x 200.23253pt.
 
-<images/chap2_segdtw_exp2.png, id=628, 823.3962pt x 500.5902pt>
+<images/chap2_segdtw_exp2.png, id=733, 823.3962pt x 500.5902pt>
 File: images/chap2_segdtw_exp2.png Graphic file (type png)
 
 <use images/chap2_segdtw_exp2.png>
@@ -1900,7 +1954,7 @@ Package hyperref Info: Anchor `page.11' on input line 125.
  [11 <./images/chap2_segdtw_exp1.png> <./images/chap2_segdtw_exp2.png>]
 Package hyperref Info: Anchor `figure.caption.10' on input line 137.
 
-<images/chap2_precision_recall.png, id=646, 413.545pt x 331.2375pt>
+<images/chap2_precision_recall.png, id=751, 413.545pt x 331.2375pt>
 File: images/chap2_precision_recall.png Graphic file (type png)
 
 <use images/chap2_precision_recall.png>
@@ -1961,7 +2015,7 @@ Package hyperref Info: Reference (link) `subfigure.2.5.2' on input line 168.
 Package hyperref Info: Reference (link) `figure.caption.14' on input line 168.
 Package hyperref Info: Anchor `figure.caption.13' on input line 169.
 Package hyperref Info: Anchor `subfigure.2.5.1' on input line 171.
- <images/ch2_bio_neuron.jpg, id=657, 502.87875pt x 269.005pt>
+ <images/ch2_bio_neuron.jpg, id=762, 502.87875pt x 269.005pt>
 File: images/ch2_bio_neuron.jpg Graphic file (type jpg)
 
 <use images/ch2_bio_neuron.jpg>
@@ -1969,7 +2023,7 @@ Package pdftex.def Info: images/ch2_bio_neuron.jpg used on input line 171.
 (pdftex.def)             Requested size: 150.86478pt x 80.70212pt.
 Package hyperref Info: Anchor `subfigure.2.5.2' on input line 172.
 
-<images/ch2_single_neuron.png, id=658, 626.34pt x 386.44376pt>
+<images/ch2_single_neuron.png, id=763, 626.34pt x 386.44376pt>
 File: images/ch2_single_neuron.png Graphic file (type png)
 
 <use images/ch2_single_neuron.png>
@@ -1990,7 +2044,7 @@ Package `hyperref' Info: End of reference (link) `figure.caption.10', line 155.
 ]
 Package hyperref Info: Anchor `figure.caption.14' on input line 176.
 
-<images/ch2_DNN.png, id=665, 595.22375pt x 355.3275pt>
+<images/ch2_DNN.png, id=770, 595.22375pt x 355.3275pt>
 File: images/ch2_DNN.png Graphic file (type png)
 
 <use images/ch2_DNN.png>
@@ -2104,7 +2158,7 @@ Package pdftex.def Info: images/ch2_DNN.png used on input line 300.
 (pdftex.def)             Requested size: 148.80557pt x 88.83165pt.
 Package hyperref Info: Anchor `subfigure.2.7.2' on input line 301.
 
-<images/ch2_dropout1.png, id=707, 593.21625pt x 351.3125pt>
+<images/ch2_dropout1.png, id=811, 593.21625pt x 351.3125pt>
 File: images/ch2_dropout1.png Graphic file (type png)
 
 <use images/ch2_dropout1.png>
@@ -2112,7 +2166,7 @@ Package pdftex.def Info: images/ch2_dropout1.png used on input line 301.
 (pdftex.def)             Requested size: 148.3037pt x 87.8279pt.
 Package hyperref Info: Anchor `subfigure.2.7.3' on input line 302.
 
-<images/ch2_dropout2.png, id=708, 582.175pt x 348.30125pt>
+<images/ch2_dropout2.png, id=812, 582.175pt x 348.30125pt>
 File: images/ch2_dropout2.png Graphic file (type png)
 
 <use images/ch2_dropout2.png>
@@ -2163,7 +2217,7 @@ Package hyperref Info: bookmark on input line 310:
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
 Package hyperref Info: Anchor `figure.caption.16' on input line 318.
-<images/ch2_RNN.png, id=720, 767.86874pt x 296.10625pt>
+<images/ch2_RNN.png, id=824, 767.86874pt x 296.10625pt>
 File: images/ch2_RNN.png Graphic file (type png)
 
 <use images/ch2_RNN.png>
@@ -2219,7 +2273,7 @@ Package hyperref Info: bookmark on input line 338:
 (hyperref)             type {toc}.
 Package hyperref Info: Reference (link) `figure.caption.17' on input line 339.
 Package hyperref Info: Anchor `figure.caption.17' on input line 340.
-<images/ch2_BPTT.png, id=729, 693.59125pt x 307.1475pt>
+<images/ch2_BPTT.png, id=833, 693.59125pt x 307.1475pt>
 File: images/ch2_BPTT.png Graphic file (type png)
 
 <use images/ch2_BPTT.png>
@@ -2244,7 +2298,7 @@ Package hyperref Info: bookmark on input line 346:
 Package hyperref Info: Reference (link) `figure.caption.18' on input line 351.
 Package hyperref Info: Anchor `figure.caption.18' on input line 353.
 
-<images/ch2_lstm.png, id=731, 378.41376pt x 273.02pt>
+<images/ch2_lstm.png, id=835, 378.41376pt x 273.02pt>
 File: images/ch2_lstm.png Graphic file (type png)
 
 <use images/ch2_lstm.png>
@@ -2272,7 +2326,7 @@ Package hyperref Info: Anchor `equation.2.3.13' on input line 364.
 Package hyperref Info: Anchor `equation.2.3.13' on input line 364.
 Package hyperref Info: Anchor `figure.caption.19' on input line 368.
 
-<images/ch2_forget_gate.png, id=740, 364.36125pt x 257.96375pt>
+<images/ch2_forget_gate.png, id=845, 364.36125pt x 257.96375pt>
 File: images/ch2_forget_gate.png Graphic file (type png)
 
 <use images/ch2_forget_gate.png>
@@ -2302,7 +2356,7 @@ Package hyperref Info: Anchor `equation.2.3.14' on input line 377.
 Package hyperref Info: Anchor `equation.2.3.14' on input line 377.
 Package hyperref Info: Anchor `figure.caption.20' on input line 385.
 
-<images/ch2_input_gate.png, id=749, 367.3725pt x 266.9975pt>
+<images/ch2_input_gate.png, id=854, 367.3725pt x 266.9975pt>
 File: images/ch2_input_gate.png Graphic file (type png)
 
 <use images/ch2_input_gate.png>
@@ -2332,7 +2386,7 @@ Package `hyperref' Info: End of reference (link) `figure.caption.21', line 392.
 
  <./images/ch2_forget_gate.png> <./images/ch2_input_gate.png>]
 Package hyperref Info: Anchor `figure.caption.21' on input line 397.
- <images/ch2_update.png, id=761, 371.3875pt x 266.9975pt>
+ <images/ch2_update.png, id=866, 371.3875pt x 266.9975pt>
 File: images/ch2_update.png Graphic file (type png)
 
 <use images/ch2_update.png>
@@ -2354,7 +2408,7 @@ Package hyperref Info: Anchor `equation.2.3.16' on input line 405.
 Package hyperref Info: Anchor `equation.2.3.16' on input line 405.
 Package hyperref Info: Anchor `figure.caption.22' on input line 413.
 
-<images/ch2_output_gate.png, id=764, 382.42876pt x 266.9975pt>
+<images/ch2_output_gate.png, id=869, 382.42876pt x 266.9975pt>
 File: images/ch2_output_gate.png Graphic file (type png)
 
 <use images/ch2_output_gate.png>
@@ -2435,7 +2489,7 @@ Package hyperref Info: bookmark on input line 13:
 Package hyperref Info: Reference (link) `figure.caption.23' on input line 16.
 Package hyperref Info: Anchor `figure.caption.23' on input line 17.
 
-<images/ch3_mfcc.png, id=777, 711.65875pt x 163.61125pt>
+<images/ch3_mfcc.png, id=882, 711.65875pt x 163.61125pt>
 File: images/ch3_mfcc.png Graphic file (type png)
 
 <use images/ch3_mfcc.png>
@@ -2464,7 +2518,7 @@ Package hyperref Info: Anchor `Item.4' on input line 35.
 Package hyperref Info: Reference (link) `figure.caption.24' on input line 37.
 Package hyperref Info: Anchor `figure.caption.24' on input line 39.
 
-<images/ch3_mel_filter.png, id=792, 545.03625pt x 209.78375pt>
+<images/ch3_mel_filter.png, id=897, 545.03625pt x 209.78375pt>
 File: images/ch3_mel_filter.png Graphic file (type png)
 
 <use images/ch3_mel_filter.png>
@@ -2503,7 +2557,7 @@ ence Model）\cite {sutskever2014sequence}}
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
 Package hyperref Info: Anchor `figure.caption.25' on input line 75.
-<images/ch3_seq2seq.png, id=803, 837.1275pt x 309.155pt>
+<images/ch3_seq2seq.png, id=907, 837.1275pt x 309.155pt>
 File: images/ch3_seq2seq.png Graphic file (type png)
 
 <use images/ch3_seq2seq.png>
@@ -2528,7 +2582,7 @@ Package `hyperref' Info: End of reference (link) `equation.3.2.1', line 59.
 ]
 Package hyperref Info: Reference (link) `figure.caption.26' on input line 90.
 Package hyperref Info: Anchor `figure.caption.26' on input line 92.
- <images/ch3_RNNVC.png, id=813, 413.545pt x 255.95625pt>
+ <images/ch3_RNNVC.png, id=917, 413.545pt x 255.95625pt>
 File: images/ch3_RNNVC.png Graphic file (type png)
 
 <use images/ch3_RNNVC.png>
@@ -2563,7 +2617,7 @@ Package hyperref Info: bookmark on input line 100:
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
 Package hyperref Info: Anchor `figure.caption.27' on input line 101.
-<images/ch3_system.png, id=814, 710.655pt x 432.61626pt>
+<images/ch3_system.png, id=918, 710.655pt x 432.61626pt>
 File: images/ch3_system.png Graphic file (type png)
 
 <use images/ch3_system.png>
@@ -2593,7 +2647,7 @@ Package hyperref Info: bookmark on input line 108:
 (hyperref)             type {toc}.
 Package hyperref Info: Anchor `figure.caption.28' on input line 110.
 
-<images/ch3_RNN_model_g.png, id=822, 878.28125pt x 428.60126pt>
+<images/ch3_RNN_model_g.png, id=926, 878.28125pt x 428.60126pt>
 File: images/ch3_RNN_model_g.png Graphic file (type png)
 
 <use images/ch3_RNN_model_g.png>
@@ -2751,58 +2805,58 @@ apping {\arabic {chapter}}\tocpostchaptername }專注式類神經網路之口�
 (hyperref)             toclevel {0}
 (hyperref)             type {toc}.
 (./chapters/chapter4.tex
-Package hyperref Info: Anchor `section.4.1' on input line 1.
-Package hyperref Info: bookmark on input line 1:
+Package hyperref Info: Anchor `section.4.1' on input line 2.
+Package hyperref Info: bookmark on input line 2:
 (hyperref)             thecounter {4.1}
 (hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
  {\csname thesection\endcsname }\fi 簡介}
 (hyperref)             reference {section.4.1}
 (hyperref)             toclevel {1}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (link) `chapter.3' on input line 2.
-Package hyperref Info: Reference (link) `chapter.3' on input line 2.
-Package hyperref Info: Anchor `section.4.2' on input line 3.
-Package hyperref Info: bookmark on input line 3:
+Package hyperref Info: Reference (link) `chapter.3' on input line 3.
+Package hyperref Info: Reference (link) `chapter.3' on input line 3.
+Package hyperref Info: Anchor `section.4.2' on input line 4.
+Package hyperref Info: bookmark on input line 4:
 (hyperref)             thecounter {4.2}
 (hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
  {\csname thesection\endcsname }\fi 專注式機制}
 (hyperref)             reference {section.4.2}
 (hyperref)             toclevel {1}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (link) `figure.caption.25' on input line 4.
-Package hyperref Info: Anchor `page.37' on input line 11.
+Package hyperref Info: Reference (link) `figure.caption.25' on input line 5.
+Package hyperref Info: Anchor `page.37' on input line 12.
  [37
 
-Package `hyperref' Info: End of reference (link) `chapter.3', line 2.
-Package `hyperref' Info: End of reference (link) `chapter.3', line 2.
-Package `hyperref' Info: End of reference (link) `figure.caption.25', line 4.
+Package `hyperref' Info: End of reference (link) `chapter.3', line 3.
+Package `hyperref' Info: End of reference (link) `chapter.3', line 3.
+Package `hyperref' Info: End of reference (link) `figure.caption.25', line 5.
 ]
-Package hyperref Info: Reference (link) `chapter.3' on input line 15.
-Package hyperref Info: Anchor `section.4.3' on input line 16.
-Package hyperref Info: bookmark on input line 16:
+Package hyperref Info: Reference (link) `chapter.3' on input line 16.
+Package hyperref Info: Anchor `section.4.3' on input line 17.
+Package hyperref Info: bookmark on input line 17:
 (hyperref)             thecounter {4.3}
 (hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
  {\csname thesection\endcsname }\fi 模型架構}
 (hyperref)             reference {section.4.3}
 (hyperref)             toclevel {1}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.4.3.1' on input line 17.
-Package hyperref Info: bookmark on input line 17:
+Package hyperref Info: Anchor `subsection.4.3.1' on input line 18.
+Package hyperref Info: bookmark on input line 18:
 (hyperref)             thecounter {4.3.1}
 (hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
  {\csname thesubsection\endcsname }\fi 系統架構簡介}
 (hyperref)             reference {subsection.4.3.1}
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `figure.caption.31' on input line 18.
+Package hyperref Info: Anchor `figure.caption.31' on input line 19.
 
-<images/ch4_model.png, id=873, 473.77pt x 486.81876pt>
+<images/ch4_model.png, id=978, 473.77pt x 486.81876pt>
 File: images/ch4_model.png Graphic file (type png)
 
 <use images/ch4_model.png>
-Package pdftex.def Info: images/ch4_model.png used on input line 20.
+Package pdftex.def Info: images/ch4_model.png used on input line 21.
 (pdftex.def)             Requested size: 236.88441pt x 243.40878pt.
-Package hyperref Info: bookmark on input line 21:
+Package hyperref Info: bookmark on input line 22:
 (hyperref)             thecounter {4.1}
 (hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
 p@figure}}{\@nameuse {thefigure}}}{\ignorespaces 模型架構圖\relax }}
@@ -2813,32 +2867,32 @@ p@figure}}{\@nameuse {thefigure}}}{\ignorespaces 模型架構圖\relax }}
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package hyperref Info: Reference (link) `figure.caption.31' on input line 24.
-Package hyperref Info: Reference (link) `chapter.3' on input line 24.
-Package hyperref Info: Reference (link) `figure.caption.32' on input line 25.
-Package hyperref Info: Reference (link) `equation.4.3.3' on input line 26.
-Package hyperref Info: Reference (link) `subsection.4.3.4' on input line 27.
-Package hyperref Info: Anchor `page.38' on input line 28.
+Package hyperref Info: Reference (link) `figure.caption.31' on input line 25.
+Package hyperref Info: Reference (link) `chapter.3' on input line 25.
+Package hyperref Info: Reference (link) `figure.caption.32' on input line 26.
+Package hyperref Info: Reference (link) `equation.4.3.3' on input line 27.
+Package hyperref Info: Reference (link) `subsection.4.3.4' on input line 28.
+Package hyperref Info: Anchor `page.38' on input line 29.
 [38
-Package `hyperref' Info: End of reference (link) `chapter.3', line 15.
-Package `hyperref' Info: End of reference (link) `figure.caption.31', line 24.
+Package `hyperref' Info: End of reference (link) `chapter.3', line 16.
+Package `hyperref' Info: End of reference (link) `figure.caption.31', line 25.
 ]
-Package hyperref Info: Anchor `subsection.4.3.2' on input line 28.
-Package hyperref Info: bookmark on input line 28:
+Package hyperref Info: Anchor `subsection.4.3.2' on input line 29.
+Package hyperref Info: bookmark on input line 29:
 (hyperref)             thecounter {4.3.2}
 (hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
  {\csname thesubsection\endcsname }\fi 語音查詢詞之向量表示法}
 (hyperref)             reference {subsection.4.3.2}
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `figure.caption.32' on input line 29.
- <images/ch4_att.png, id=883, 590.205pt x 364.36125pt>
+Package hyperref Info: Anchor `figure.caption.32' on input line 30.
+ <images/ch4_att.png, id=988, 590.205pt x 364.36125pt>
 File: images/ch4_att.png Graphic file (type png)
 
 <use images/ch4_att.png>
-Package pdftex.def Info: images/ch4_att.png used on input line 31.
+Package pdftex.def Info: images/ch4_att.png used on input line 32.
 (pdftex.def)             Requested size: 413.14067pt x 255.05113pt.
-Package hyperref Info: bookmark on input line 32:
+Package hyperref Info: bookmark on input line 33:
 (hyperref)             thecounter {4.2}
 (hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
 p@figure}}{\@nameuse {thefigure}}}{\ignorespaces 專注式機制流程圖\relax
@@ -2850,19 +2904,19 @@ p@figure}}{\@nameuse {thefigure}}}{\ignorespaces 專注式機制流程圖\relax
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package hyperref Info: Reference (link) `figure.caption.32' on input line 36.
-Package hyperref Info: Reference (link) `figure.caption.32' on input line 41.
-Package hyperref Info: Anchor `page.39' on input line 47.
+Package hyperref Info: Reference (link) `figure.caption.32' on input line 37.
+Package hyperref Info: Reference (link) `figure.caption.32' on input line 42.
+Package hyperref Info: Anchor `page.39' on input line 48.
 [39
-Package `hyperref' Info: End of reference (link) `chapter.3', line 24.
-Package `hyperref' Info: End of reference (link) `figure.caption.32', line 25.
-Package `hyperref' Info: End of reference (link) `equation.4.3.3', line 26.
-Package `hyperref' Info: End of reference (link) `subsection.4.3.4', line 27.
-Package `hyperref' Info: End of reference (link) `figure.caption.32', line 36.
-Package `hyperref' Info: End of reference (link) `figure.caption.32', line 41.
+Package `hyperref' Info: End of reference (link) `chapter.3', line 25.
+Package `hyperref' Info: End of reference (link) `figure.caption.32', line 26.
+Package `hyperref' Info: End of reference (link) `equation.4.3.3', line 27.
+Package `hyperref' Info: End of reference (link) `subsection.4.3.4', line 28.
+Package `hyperref' Info: End of reference (link) `figure.caption.32', line 37.
+Package `hyperref' Info: End of reference (link) `figure.caption.32', line 42.
  <./images/ch4_model.png>]
-Package hyperref Info: Anchor `subsection.4.3.3' on input line 47.
-Package hyperref Info: bookmark on input line 47:
+Package hyperref Info: Anchor `subsection.4.3.3' on input line 48.
+Package hyperref Info: bookmark on input line 48:
 (hyperref)             thecounter {4.3.3}
 (hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
  {\csname thesubsection\endcsname }\fi 專注式機制與語音文件表示法}
@@ -2870,69 +2924,69 @@ Package hyperref Info: bookmark on input line 47:
 (hyperref)             reference {subsection.4.3.3}
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (link) `figure.caption.32' on input line 48.
-Package hyperref Info: Reference (link) `figure.caption.32' on input line 51.
-Package hyperref Info: Reference (link) `equation.4.3.1' on input line 60.
-Package hyperref Info: Anchor `page.40' on input line 61.
+Package hyperref Info: Reference (link) `figure.caption.32' on input line 49.
+Package hyperref Info: Reference (link) `figure.caption.32' on input line 52.
+Package hyperref Info: Reference (link) `equation.4.3.1' on input line 61.
+Package hyperref Info: Anchor `page.40' on input line 62.
  [40
-Package `hyperref' Info: End of reference (link) `figure.caption.32', line 48.
-Package `hyperref' Info: End of reference (link) `figure.caption.32', line 51.
+Package `hyperref' Info: End of reference (link) `figure.caption.32', line 49.
+Package `hyperref' Info: End of reference (link) `figure.caption.32', line 52.
  <./images/ch4_att.png>]
-Package hyperref Info: Anchor `equation.4.3.1' on input line 61.
-Package hyperref Info: Anchor `equation.4.3.1' on input line 61.
-Package hyperref Info: Anchor `equation.4.3.1' on input line 61.
-Package hyperref Info: Anchor `equation.4.3.1' on input line 61.
-Package hyperref Info: Anchor `equation.4.3.2' on input line 72.
-Package hyperref Info: Anchor `equation.4.3.2' on input line 72.
-Package hyperref Info: Anchor `equation.4.3.2' on input line 72.
-Package hyperref Info: Anchor `equation.4.3.2' on input line 72.
-Package hyperref Info: Anchor `equation.4.3.3' on input line 84.
-Package hyperref Info: Anchor `equation.4.3.3' on input line 84.
-Package hyperref Info: Anchor `equation.4.3.3' on input line 84.
-Package hyperref Info: Anchor `equation.4.3.3' on input line 84.
-Package hyperref Info: Anchor `subsection.4.3.4' on input line 96.
-Package hyperref Info: bookmark on input line 96:
+Package hyperref Info: Anchor `equation.4.3.1' on input line 62.
+Package hyperref Info: Anchor `equation.4.3.1' on input line 62.
+Package hyperref Info: Anchor `equation.4.3.1' on input line 62.
+Package hyperref Info: Anchor `equation.4.3.1' on input line 62.
+Package hyperref Info: Anchor `equation.4.3.2' on input line 73.
+Package hyperref Info: Anchor `equation.4.3.2' on input line 73.
+Package hyperref Info: Anchor `equation.4.3.2' on input line 73.
+Package hyperref Info: Anchor `equation.4.3.2' on input line 73.
+Package hyperref Info: Anchor `equation.4.3.3' on input line 85.
+Package hyperref Info: Anchor `equation.4.3.3' on input line 85.
+Package hyperref Info: Anchor `equation.4.3.3' on input line 85.
+Package hyperref Info: Anchor `equation.4.3.3' on input line 85.
+Package hyperref Info: Anchor `subsection.4.3.4' on input line 97.
+Package hyperref Info: bookmark on input line 97:
 (hyperref)             thecounter {4.3.4}
 (hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
  {\csname thesubsection\endcsname }\fi 分類器}
 (hyperref)             reference {subsection.4.3.4}
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `page.41' on input line 103.
+Package hyperref Info: Anchor `page.41' on input line 104.
  [41
-Package `hyperref' Info: End of reference (link) `equation.4.3.1', line 60.
+Package `hyperref' Info: End of reference (link) `equation.4.3.1', line 61.
 ]
-Package hyperref Info: Anchor `section.4.4' on input line 103.
-Package hyperref Info: bookmark on input line 103:
+Package hyperref Info: Anchor `section.4.4' on input line 104.
+Package hyperref Info: bookmark on input line 104:
 (hyperref)             thecounter {4.4}
 (hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
  {\csname thesection\endcsname }\fi 實驗與分析}
 (hyperref)             reference {section.4.4}
 (hyperref)             toclevel {1}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.4.4.1' on input line 104.
-Package hyperref Info: bookmark on input line 104:
+Package hyperref Info: Anchor `subsection.4.4.1' on input line 105.
+Package hyperref Info: bookmark on input line 105:
 (hyperref)             thecounter {4.4.1}
 (hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
  {\csname thesubsection\endcsname }\fi 基準實驗與實驗設定}
 (hyperref)             reference {subsection.4.4.1}
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (link) `equation.4.4.4' on input line 109.
-Package hyperref Info: Anchor `equation.4.4.4' on input line 110.
-Package hyperref Info: Anchor `equation.4.4.4' on input line 110.
-Package hyperref Info: Anchor `equation.4.4.4' on input line 110.
-Package hyperref Info: Anchor `equation.4.4.4' on input line 110.
-Package hyperref Info: Anchor `subsection.4.4.2' on input line 115.
-Package hyperref Info: bookmark on input line 115:
+Package hyperref Info: Reference (link) `equation.4.4.4' on input line 110.
+Package hyperref Info: Anchor `equation.4.4.4' on input line 111.
+Package hyperref Info: Anchor `equation.4.4.4' on input line 111.
+Package hyperref Info: Anchor `equation.4.4.4' on input line 111.
+Package hyperref Info: Anchor `equation.4.4.4' on input line 111.
+Package hyperref Info: Anchor `subsection.4.4.2' on input line 116.
+Package hyperref Info: bookmark on input line 116:
 (hyperref)             thecounter {4.4.2}
 (hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
  {\csname thesubsection\endcsname }\fi 實驗結果與比較}
 (hyperref)             reference {subsection.4.4.2}
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `table.caption.33' on input line 116.
-Package hyperref Info: bookmark on input line 118:
+Package hyperref Info: Anchor `table.caption.33' on input line 117.
+Package hyperref Info: bookmark on input line 119:
 (hyperref)             thecounter {4.1}
 (hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
 p@table}}{\@nameuse {thetable}}}{\ignorespaces 專注式遞迴類神經網路�
@@ -2940,26 +2994,25 @@ p@table}}{\@nameuse {thetable}}}{\ignorespaces 專注式遞迴類神經網路�
 (hyperref)             reference {table.caption.33}
 (hyperref)             toclevel {0}
 (hyperref)             type {lot}.
-Package hyperref Info: Anchor `page.42' on input line 144.
+Package hyperref Info: Anchor `page.42' on input line 145.
  [42
-Package `hyperref' Info: End of reference (link) `equation.4.4.4', line 109.
+Package `hyperref' Info: End of reference (link) `equation.4.4.4', line 110.
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 148--150
-
- []
-
-Package hyperref Info: Anchor `page.43' on input line 153.
-[43]
-Package hyperref Info: Anchor `subsection.4.4.3' on input line 154.
-Package hyperref Info: bookmark on input line 154:
+Package hyperref Info: Reference (link) `table.caption.33' on input line 148.
+Package hyperref Info: Anchor `page.43' on input line 154.
+ [43
+Package `hyperref' Info: End of reference (link) `table.caption.33', line 148.
+]
+Package hyperref Info: Anchor `subsection.4.4.3' on input line 155.
+Package hyperref Info: bookmark on input line 155:
 (hyperref)             thecounter {4.4.3}
 (hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
  {\csname thesubsection\endcsname }\fi 結合基準實驗}
 (hyperref)             reference {subsection.4.4.3}
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `table.caption.34' on input line 155.
-Package hyperref Info: bookmark on input line 157:
+Package hyperref Info: Anchor `table.caption.34' on input line 156.
+Package hyperref Info: bookmark on input line 158:
 (hyperref)             thecounter {4.2}
 (hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
 p@table}}{\@nameuse {thetable}}}{\ignorespaces 結合基準實驗之結果\rela
@@ -2967,18 +3020,16 @@ x }}
 (hyperref)             reference {table.caption.34}
 (hyperref)             toclevel {0}
 (hyperref)             type {lot}.
-Package hyperref Info: Anchor `page.44' on input line 190.
- [44]
-Package hyperref Info: Anchor `subsection.4.4.4' on input line 190.
-Package hyperref Info: bookmark on input line 190:
+Package hyperref Info: Anchor `subsection.4.4.4' on input line 191.
+Package hyperref Info: bookmark on input line 191:
 (hyperref)             thecounter {4.4.4}
 (hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
  {\csname thesubsection\endcsname }\fi 專注式機制探討}
 (hyperref)             reference {subsection.4.4.4}
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `table.caption.35' on input line 192.
-Package hyperref Info: bookmark on input line 194:
+Package hyperref Info: Anchor `table.caption.35' on input line 195.
+Package hyperref Info: bookmark on input line 197:
 (hyperref)             thecounter {4.3}
 (hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
 p@table}}{\@nameuse {thetable}}}{\ignorespaces 專注式機制比較之結果\r
@@ -2986,26 +3037,29 @@ elax }}
 (hyperref)             reference {table.caption.35}
 (hyperref)             toclevel {0}
 (hyperref)             type {lot}.
-Package hyperref Info: Reference (link) `table.caption.35' on input line 225.
-Package hyperref Info: Reference (link) `subfigure.4.3.1' on input line 229.
-Package hyperref Info: Reference (link) `subfigure.4.3.2' on input line 229.
-Package hyperref Info: Anchor `figure.caption.36' on input line 230.
-Package hyperref Info: Anchor `subfigure.4.3.1' on input line 232.
- <images/ch4_softmax_att.png, id=928, 435.6275pt x 308.15125pt>
+Package hyperref Info: Anchor `page.44' on input line 227.
+
+[44]
+Package hyperref Info: Reference (link) `table.caption.35' on input line 228.
+Package hyperref Info: Reference (link) `subfigure.4.3.1' on input line 233.
+Package hyperref Info: Reference (link) `subfigure.4.3.2' on input line 233.
+Package hyperref Info: Anchor `figure.caption.36' on input line 234.
+Package hyperref Info: Anchor `subfigure.4.3.1' on input line 236.
+ <images/ch4_softmax_att.png, id=1031, 681.54625pt x 515.9275pt>
 File: images/ch4_softmax_att.png Graphic file (type png)
 
 <use images/ch4_softmax_att.png>
-Package pdftex.def Info: images/ch4_softmax_att.png used on input line 232.
-(pdftex.def)             Requested size: 274.44678pt x 194.1363pt.
-Package hyperref Info: Anchor `subfigure.4.3.2' on input line 234.
+Package pdftex.def Info: images/ch4_softmax_att.png used on input line 236.
+(pdftex.def)             Requested size: 272.61366pt x 206.36734pt.
+Package hyperref Info: Anchor `subfigure.4.3.2' on input line 238.
 
-<images/ch4_sigmoid_att.png, id=929, 440.64626pt x 345.29pt>
+<images/ch4_sigmoid_att.png, id=1032, 682.55pt x 527.9725pt>
 File: images/ch4_sigmoid_att.png Graphic file (type png)
 
 <use images/ch4_sigmoid_att.png>
-Package pdftex.def Info: images/ch4_sigmoid_att.png used on input line 234.
-(pdftex.def)             Requested size: 277.6086pt x 217.53383pt.
-Package hyperref Info: bookmark on input line 235:
+Package pdftex.def Info: images/ch4_sigmoid_att.png used on input line 238.
+(pdftex.def)             Requested size: 273.01517pt x 211.18526pt.
+Package hyperref Info: bookmark on input line 239:
 (hyperref)             thecounter {4.3}
 (hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
 p@figure}}{\@nameuse {thefigure}}}{\ignorespaces 專注式機制視覺圖\relax
@@ -3013,71 +3067,419 @@ p@figure}}{\@nameuse {thefigure}}}{\ignorespaces 專注式機制視覺圖\relax
 (hyperref)             reference {figure.caption.36}
 (hyperref)             toclevel {0}
 (hyperref)             type {lof}.
-Package hyperref Info: Anchor `page.45' on input line 237.
- [45
-Package `hyperref' Info: End of reference (link) `table.caption.35', line 225.
-]
-Package hyperref Info: Reference (link) `subfigure.4.3.1' on input line 238.
-Package hyperref Info: Reference (link) `subfigure.4.3.2' on input line 238.
-Package hyperref Info: Anchor `figure.caption.37' on input line 239.
-Package hyperref Info: Anchor `subfigure.4.4.1' on input line 241.
+Package hyperref Info: Reference (link) `subfigure.4.3.1' on input line 241.
+Package hyperref Info: Reference (link) `subfigure.4.3.2' on input line 241.
+Package hyperref Info: Anchor `figure.caption.37' on input line 242.
 
-<images/ch4_softmax_spec.png, id=936, 812.03375pt x 538.01pt>
+<images/ch4_softmax_spec.png, id=1035, 840.13875pt x 555.07375pt>
 File: images/ch4_softmax_spec.png Graphic file (type png)
 
 <use images/ch4_softmax_spec.png>
-Package pdftex.def Info: images/ch4_softmax_spec.png used on input line 241.
-(pdftex.def)             Requested size: 243.612pt x 161.40424pt.
-Package hyperref Info: Anchor `subfigure.4.4.2' on input line 243.
-
-<images/ch4_sigmoid_spec.png, id=937, 821.0675pt x 529.98pt>
-File: images/ch4_sigmoid_spec.png Graphic file (type png)
-
-<use images/ch4_sigmoid_spec.png>
-Package pdftex.def Info: images/ch4_sigmoid_spec.png used on input line 243.
-(pdftex.def)             Requested size: 246.32214pt x 158.99521pt.
-Package hyperref Info: bookmark on input line 244:
+Package pdftex.def Info: images/ch4_softmax_spec.png used on input line 244.
+(pdftex.def)             Requested size: 420.06834pt x 277.53618pt.
+Package hyperref Info: bookmark on input line 245:
 (hyperref)             thecounter {4.4}
 (hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
-p@figure}}{\@nameuse {thefigure}}}{\ignorespaces 專注式機制頻譜圖\relax
+p@figure}}{\@nameuse {thefigure}}}{\ignorespaces 尖銳正規化頻譜圖\relax
  }}
 (hyperref)             reference {figure.caption.37}
 (hyperref)             toclevel {0}
 (hyperref)             type {lof}.
-Package hyperref Info: Anchor `page.46' on input line 246.
+Package hyperref Info: Anchor `page.45' on input line 248.
+ [45
+Package `hyperref' Info: End of reference (link) `table.caption.35', line 228.
+]
+Package hyperref Info: Anchor `page.46' on input line 248.
  [46
-Package `hyperref' Info: End of reference (link) `subfigure.4.3.1', line 229.
-Package `hyperref' Info: End of reference (link) `subfigure.4.3.2', line 229.
-Package `hyperref' Info: End of reference (link) `subfigure.4.3.1', line 238.
-Package `hyperref' Info: End of reference (link) `subfigure.4.3.2', line 238.
+Package `hyperref' Info: End of reference (link) `subfigure.4.3.1', line 233.
+Package `hyperref' Info: End of reference (link) `subfigure.4.3.2', line 233.
+Package `hyperref' Info: End of reference (link) `subfigure.4.3.1', line 241.
+Package `hyperref' Info: End of reference (link) `subfigure.4.3.2', line 241.
  <./images/ch4_softmax_att.png> <./images/ch4_sigmoid_att.png>]
-Package hyperref Info: Reference (link) `subfigure.4.4.1' on input line 249.
-Package hyperref Info: Reference (link) `subfigure.4.4.2' on input line 249.
-Package hyperref Info: Anchor `page.47' on input line 250.
- [47 <./images/ch4_softmax_spec.png> <./images/ch4_sigmoid_spec.png>]
-Package hyperref Info: Anchor `section.4.5' on input line 251.
-Package hyperref Info: bookmark on input line 251:
+Package hyperref Info: Anchor `figure.caption.38' on input line 249.
+
+<images/ch4_sigmoid_spec.png, id=1048, 840.13875pt x 552.0625pt>
+File: images/ch4_sigmoid_spec.png Graphic file (type png)
+
+<use images/ch4_sigmoid_spec.png>
+Package pdftex.def Info: images/ch4_sigmoid_spec.png used on input line 251.
+(pdftex.def)             Requested size: 420.06834pt x 276.03056pt.
+Package hyperref Info: bookmark on input line 252:
+(hyperref)             thecounter {4.5}
+(hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
+p@figure}}{\@nameuse {thefigure}}}{\ignorespaces 平滑正規化頻譜圖\relax
+ }}
+(hyperref)             reference {figure.caption.38}
+(hyperref)             toclevel {0}
+(hyperref)             type {lof}.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package hyperref Info: Reference (link) `figure.caption.37' on input line 255.
+Package hyperref Info: Reference (link) `figure.caption.38' on input line 255.
+Package hyperref Info: Anchor `subsection.4.4.5' on input line 257.
+Package hyperref Info: bookmark on input line 257:
+(hyperref)             thecounter {4.4.5}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
+ {\csname thesubsection\endcsname }\fi 非監督式訓練}
+(hyperref)             reference {subsection.4.4.5}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `equation.4.4.5' on input line 259.
+Package hyperref Info: Anchor `page.47' on input line 260.
+[47
+Package `hyperref' Info: End of reference (link) `figure.caption.37', line 255.
+
+Package `hyperref' Info: End of reference (link) `figure.caption.38', line 255.
+
+ <./images/ch4_softmax_spec.png>]
+Package hyperref Info: Anchor `equation.4.4.5' on input line 261.
+Package hyperref Info: Anchor `equation.4.4.5' on input line 261.
+Package hyperref Info: Anchor `equation.4.4.5' on input line 261.
+Package hyperref Info: Anchor `equation.4.4.5' on input line 261.
+Package hyperref Info: Anchor `table.caption.39' on input line 266.
+Package hyperref Info: bookmark on input line 268:
+(hyperref)             thecounter {4.4}
+(hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
+p@table}}{\@nameuse {thetable}}}{\ignorespaces 非監督式學習\relax }}
+(hyperref)             reference {table.caption.39}
+(hyperref)             toclevel {0}
+(hyperref)             type {lot}.
+Package hyperref Info: Reference (link) `table.caption.39' on input line 283.
+Package hyperref Info: Anchor `page.48' on input line 284.
+ [48
+Package `hyperref' Info: End of reference (link) `equation.4.4.5', line 259.
+ <./images/ch4_sigmoid_spec.png>]
+Package hyperref Info: Anchor `section.4.5' on input line 284.
+Package hyperref Info: bookmark on input line 284:
 (hyperref)             thecounter {4.5}
 (hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
  {\csname thesection\endcsname }\fi 本章總結}
 (hyperref)             reference {section.4.5}
 (hyperref)             toclevel {1}
 (hyperref)             type {toc}.
-) (./thesis_backpages.tex
-Package hyperref Info: Anchor `page.48' on input line 6.
- [48
-Package `hyperref' Info: End of reference (link) `subfigure.4.4.1', line 249.
-Package `hyperref' Info: End of reference (link) `subfigure.4.4.2', line 249.
+)
+Package hyperref Info: Anchor `page.49' on input line 213.
+
+[49
+Package `hyperref' Info: End of reference (link) `table.caption.39', line 283.
 ]
-Package hyperref Info: Anchor `section*.38' on input line 7.
-Package hyperref Info: bookmark on input line 8:
-(hyperref)             thecounter {4}
-(hyperref)             text {\nameRef }
-(hyperref)             reference {section*.38}
+Package hyperref Info: Anchor `chapter.5' on input line 213.
+
+Chapter 5.
+Package hyperref Info: bookmark on input line 213:
+(hyperref)             thecounter {5}
+(hyperref)             text {\tocprechaptername \protect \numberline {\counterm
+apping {\arabic {chapter}}\tocpostchaptername }語音詞向量之口語詞彙�
+�測}
+(hyperref)             reference {chapter.5}
 (hyperref)             toclevel {0}
 (hyperref)             type {toc}.
- (dist/thesis.bbl
-Package hyperref Info: Anchor `chapter*.39' on input line 1.
+(./chapters/chapter5.tex
+Package hyperref Info: Anchor `section.5.1' on input line 2.
+Package hyperref Info: bookmark on input line 2:
+(hyperref)             thecounter {5.1}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
+ {\csname thesection\endcsname }\fi 簡介}
+(hyperref)             reference {section.5.1}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `section.5.2' on input line 6.
+Package hyperref Info: bookmark on input line 6:
+(hyperref)             thecounter {5.2}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
+ {\csname thesection\endcsname }\fi 語音詞向量}
+(hyperref)             reference {section.5.2}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `figure.caption.40' on input line 15.
+
+<images/ch5_seq2seq.png, id=1070, 858.20625pt x 473.77pt>
+File: images/ch5_seq2seq.png Graphic file (type png)
+
+<use images/ch5_seq2seq.png>
+Package pdftex.def Info: images/ch5_seq2seq.png used on input line 17.
+(pdftex.def)             Requested size: 429.10208pt x 236.88441pt.
+
+Overfull \hbox (2.31073pt too wide) in paragraph at lines 17--18
+ [][] 
+ []
+
+Package hyperref Info: bookmark on input line 18:
+(hyperref)             thecounter {5.1}
+(hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
+p@figure}}{\@nameuse {thefigure}}}{\ignorespaces 語音詞向量模型圖\relax
+ }}
+(hyperref)             reference {figure.caption.40}
+(hyperref)             toclevel {0}
+(hyperref)             type {lof}.
+Package hyperref Info: Anchor `page.50' on input line 22.
+[50
+
+]
+Package hyperref Info: Reference (link) `figure.caption.40' on input line 23.
+Package hyperref Info: Reference (link) `figure.caption.25' on input line 23.
+Package hyperref Info: Anchor `section.5.3' on input line 25.
+Package hyperref Info: bookmark on input line 25:
+(hyperref)             thecounter {5.3}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
+ {\csname thesection\endcsname }\fi 模型架構}
+(hyperref)             reference {section.5.3}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.5.3.1' on input line 26.
+Package hyperref Info: bookmark on input line 26:
+(hyperref)             thecounter {5.3.1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
+ {\csname thesubsection\endcsname }\fi 模型簡介}
+(hyperref)             reference {subsection.5.3.1}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `figure.caption.41' on input line 27.
+
+Overfull \hbox (0.57527pt too wide) in paragraph at lines 27--28
+\C70/bsmi/bx/n/12/57 ^^V[][]\OT1/ptm/m/n/12 5.2[][][]\C70/bsmi/m/n/12/70 � \C70
+/bsmi/m/n/12/67 , \C70/bsmi/m/n/12/7a � \C70/bsmi/m/n/12/76 � \C70/bsmi/bx/n/12
+/6a ! \C70/bsmi/bx/n/12/57 � \C70/bsmi/m/n/12/67 � \C70/bsmi/m/n/12/69 � \C70/b
+smi/bx/n/12/57 ^^V \C70/bsmi/m/n/12/ff ^^L \C70/bsmi/m/n/12/90 ^ \C70/bsmi/bx/n
+/12/8f � \C70/bsmi/m/n/12/98 ^ \C70/bsmi/m/n/12/79 ^ \C70/bsmi/bx/n/12/7d � � \
+C70/bsmi/m/n/12/8d � \C70/bsmi/bx/n/12/7d � \C70/bsmi/bx/n/12/78 � \C70/bsmi/bx
+/n/12/56 h \C70/bsmi/m/n/12/67 ^^C \C70/bsmi/m/n/12/5c ^^G \C70/bsmi/m/n/12/67 
+� \C70/bsmi/bx/n/12/8a b ^ \C70/bsmi/bx/n/12/5e � \C70/bsmi/m/n/12/52 ^^W$\OML/
+cmm/m/it/12 Q[]; Q[]; :::Q[]$\C70/bsmi/bx/n/12/7d �
+ []
+
+Package hyperref Info: Anchor `page.51' on input line 28.
+[51
+Package `hyperref' Info: End of reference (link) `figure.caption.40', line 23.
+Package `hyperref' Info: End of reference (link) `figure.caption.25', line 23.
+ <./images/ch5_seq2seq.png>]
+Package hyperref Info: Reference (link) `figure.caption.41' on input line 29.
+Package hyperref Info: Reference (link) `chapter.3' on input line 29.
+Package hyperref Info: Anchor `figure.caption.41' on input line 30.
+
+<images/ch5_model.png, id=1085, 784.9325pt x 461.725pt>
+File: images/ch5_model.png Graphic file (type png)
+
+<use images/ch5_model.png>
+Package pdftex.def Info: images/ch5_model.png used on input line 32.
+(pdftex.def)             Requested size: 392.46529pt x 230.86194pt.
+Package hyperref Info: bookmark on input line 33:
+(hyperref)             thecounter {5.2}
+(hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
+p@figure}}{\@nameuse {thefigure}}}{\ignorespaces 模型架構圖\relax }}
+(hyperref)             reference {figure.caption.41}
+(hyperref)             toclevel {0}
+(hyperref)             type {lof}.
+Package hyperref Info: Anchor `subsection.5.3.2' on input line 36.
+Package hyperref Info: bookmark on input line 36:
+(hyperref)             thecounter {5.3.2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
+ {\csname thesubsection\endcsname }\fi 訓練方式}
+(hyperref)             reference {subsection.5.3.2}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `equation.6.2.2' on input line 37.
+Package hyperref Info: Anchor `page.52' on input line 38.
+ [52
+Package `hyperref' Info: End of reference (link) `figure.caption.41', line 27.
+Package `hyperref' Info: End of reference (link) `figure.caption.41', line 29.
+Package `hyperref' Info: End of reference (link) `chapter.3', line 29.
+ <./images/ch5_model.png>]
+Package hyperref Info: Anchor `equation.5.3.1' on input line 38.
+Package hyperref Info: Anchor `equation.5.3.1' on input line 38.
+Package hyperref Info: Anchor `equation.5.3.1' on input line 38.
+Package hyperref Info: Anchor `equation.5.3.1' on input line 38.
+Package hyperref Info: Anchor `section.5.4' on input line 46.
+Package hyperref Info: bookmark on input line 46:
+(hyperref)             thecounter {5.4}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
+ {\csname thesection\endcsname }\fi 實驗與分析}
+(hyperref)             reference {section.5.4}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.5.4.1' on input line 47.
+Package hyperref Info: bookmark on input line 47:
+(hyperref)             thecounter {5.4.1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
+ {\csname thesubsection\endcsname }\fi 實驗設定與基準實驗}
+(hyperref)             reference {subsection.5.4.1}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `chapter.4' on input line 52.
+Package hyperref Info: Anchor `subsection.5.4.2' on input line 57.
+Package hyperref Info: bookmark on input line 57:
+(hyperref)             thecounter {5.4.2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
+ {\csname thesubsection\endcsname }\fi 實驗結果與分析}
+(hyperref)             reference {subsection.5.4.2}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `table.caption.42' on input line 58.
+Package hyperref Info: Anchor `page.53' on input line 59.
+ [53
+Package `hyperref' Info: End of reference (link) `equation.6.2.2', line 37.
+Package `hyperref' Info: End of reference (link) `chapter.4', line 52.
+]
+Package hyperref Info: Anchor `table.caption.42' on input line 62.
+Package hyperref Info: bookmark on input line 64:
+(hyperref)             thecounter {5.1}
+(hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
+p@table}}{\@nameuse {thetable}}}{\ignorespaces 語音詞向量之實驗結果\r
+elax }}
+(hyperref)             reference {table.caption.42}
+(hyperref)             toclevel {0}
+(hyperref)             type {lot}.
+Package hyperref Info: Anchor `section.5.5' on input line 86.
+Package hyperref Info: bookmark on input line 86:
+(hyperref)             thecounter {5.5}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
+ {\csname thesection\endcsname }\fi 本章總結}
+(hyperref)             reference {section.5.5}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+)
+Package hyperref Info: Anchor `page.54' on input line 215.
+ [54
+Package `hyperref' Info: End of reference (link) `table.caption.42', line 58.
+]
+Package hyperref Info: Anchor `page.55' on input line 215.
+ [55]
+Package hyperref Info: Anchor `chapter.6' on input line 215.
+
+Chapter 6.
+Package hyperref Info: bookmark on input line 215:
+(hyperref)             thecounter {6}
+(hyperref)             text {\tocprechaptername \protect \numberline {\counterm
+apping {\arabic {chapter}}\tocpostchaptername }專注式和語音詞向量之�
+�語詞彙偵測}
+(hyperref)             reference {chapter.6}
+(hyperref)             toclevel {0}
+(hyperref)             type {toc}.
+(./chapters/chapter6.tex
+Package hyperref Info: Anchor `section.6.1' on input line 1.
+Package hyperref Info: bookmark on input line 1:
+(hyperref)             thecounter {6.1}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
+ {\csname thesection\endcsname }\fi 簡介}
+(hyperref)             reference {section.6.1}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `chapter.4' on input line 2.
+Package hyperref Info: Reference (link) `chapter.5' on input line 2.
+Package hyperref Info: Reference (link) `chapter.5' on input line 2.
+Package hyperref Info: Reference (link) `chapter.4' on input line 2.
+Package hyperref Info: Anchor `section.6.2' on input line 3.
+Package hyperref Info: bookmark on input line 3:
+(hyperref)             thecounter {6.2}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
+ {\csname thesection\endcsname }\fi 模型架構}
+(hyperref)             reference {section.6.2}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.6.2.1' on input line 4.
+Package hyperref Info: bookmark on input line 4:
+(hyperref)             thecounter {6.2.1}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
+ {\csname thesubsection\endcsname }\fi 模型簡介}
+(hyperref)             reference {subsection.6.2.1}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `figure.caption.43' on input line 5.
+Package hyperref Info: Reference (link) `chapter.4' on input line 5.
+Package hyperref Info: Reference (link) `figure.caption.32' on input line 5.
+Package hyperref Info: Reference (link) `figure.caption.32' on input line 5.
+Package hyperref Info: Anchor `figure.caption.43' on input line 7.
+
+<images/ch6_model.png, id=1117, 647.41875pt x 440.64626pt>
+File: images/ch6_model.png Graphic file (type png)
+
+<use images/ch6_model.png>
+Package pdftex.def Info: images/ch6_model.png used on input line 9.
+(pdftex.def)             Requested size: 323.70857pt x 220.32259pt.
+Package hyperref Info: bookmark on input line 10:
+(hyperref)             thecounter {6.1}
+(hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
+p@figure}}{\@nameuse {thefigure}}}{\ignorespaces 模型架構圖\relax }}
+(hyperref)             reference {figure.caption.43}
+(hyperref)             toclevel {0}
+(hyperref)             type {lof}.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package hyperref Info: Anchor `subsection.6.2.2' on input line 13.
+Package hyperref Info: bookmark on input line 13:
+(hyperref)             thecounter {6.2.2}
+(hyperref)             text {\ifnum 2>\c@secnumdepth \else \protect \numberline
+ {\csname thesubsection\endcsname }\fi 訓練方式}
+(hyperref)             reference {subsection.6.2.2}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (link) `equation.6.2.1' on input line 15.
+Package hyperref Info: Anchor `page.56' on input line 16.
+[56
+
+Package `hyperref' Info: End of reference (link) `chapter.4', line 2.
+Package `hyperref' Info: End of reference (link) `chapter.5', line 2.
+Package `hyperref' Info: End of reference (link) `chapter.5', line 2.
+Package `hyperref' Info: End of reference (link) `chapter.4', line 2.
+Package `hyperref' Info: End of reference (link) `figure.caption.43', line 5.
+Package `hyperref' Info: End of reference (link) `chapter.4', line 5.
+Package `hyperref' Info: End of reference (link) `figure.caption.32', line 5.
+Package `hyperref' Info: End of reference (link) `figure.caption.32', line 5.
+]
+Package hyperref Info: Anchor `equation.6.2.1' on input line 16.
+Package hyperref Info: Anchor `equation.6.2.1' on input line 16.
+Package hyperref Info: Anchor `equation.6.2.1' on input line 16.
+Package hyperref Info: Anchor `equation.6.2.1' on input line 16.
+Package hyperref Info: Reference (link) `equation.6.2.2' on input line 21.
+Package hyperref Info: Anchor `equation.6.2.2' on input line 22.
+Package hyperref Info: Anchor `equation.6.2.2' on input line 22.
+Package hyperref Info: Anchor `equation.6.2.2' on input line 22.
+Package hyperref Info: Anchor `equation.6.2.2' on input line 22.
+Package hyperref Info: Anchor `section.6.3' on input line 29.
+Package hyperref Info: bookmark on input line 29:
+(hyperref)             thecounter {6.3}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
+ {\csname thesection\endcsname }\fi 實驗與分析}
+(hyperref)             reference {section.6.3}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `page.57' on input line 33.
+ [57
+Package `hyperref' Info: End of reference (link) `equation.6.2.1', line 15.
+Package `hyperref' Info: End of reference (link) `equation.6.2.2', line 21.
+ <./images/ch6_model.png>]
+Package hyperref Info: Reference (link) `chapter.4' on input line 34.
+Package hyperref Info: Reference (link) `figure.caption.43' on input line 36.
+Package hyperref Info: Reference (link) `figure.caption.43' on input line 36.
+Package hyperref Info: Anchor `section.6.4' on input line 41.
+Package hyperref Info: bookmark on input line 41:
+(hyperref)             thecounter {6.4}
+(hyperref)             text {\ifnum 1>\c@secnumdepth \else \protect \numberline
+ {\csname thesection\endcsname }\fi 本章總結}
+(hyperref)             reference {section.6.4}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+) (./thesis_backpages.tex
+Package hyperref Info: Anchor `page.58' on input line 6.
+ [58
+Package `hyperref' Info: End of reference (link) `chapter.4', line 34.
+Package `hyperref' Info: End of reference (link) `figure.caption.43', line 36.
+Package `hyperref' Info: End of reference (link) `figure.caption.43', line 36.
+]
+Package hyperref Info: Anchor `section*.44' on input line 7.
+Package hyperref Info: bookmark on input line 8:
+(hyperref)             thecounter {6}
+(hyperref)             text {\nameRef }
+(hyperref)             reference {section*.44}
+(hyperref)             toclevel {0}
+(hyperref)             type {toc}.
+
+(dist/thesis.bbl
+Package hyperref Info: Anchor `chapter*.45' on input line 1.
 
 Underfull \hbox (badness 10000) detected at line 1
 \C70/bsmi/bx/n/20.74/53 �[][] \C70/bsmi/bx/n/20.74/80 ^^C[][] \C70/bsmi/bx/n/20
@@ -3097,10 +3499,10 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 Package hyperref Info: Anchor `Item.13' on input line 38.
 Package hyperref Info: Anchor `Item.14' on input line 43.
 Package hyperref Info: Anchor `Item.15' on input line 50.
-Package hyperref Info: Anchor `page.49' on input line 56.
- [49
+Package hyperref Info: Anchor `page.59' on input line 56.
+ [59
 
-Package `hyperref' Info: End of reference (link) `subfigure.4.4.2', line 249.
+Package `hyperref' Info: End of reference (link) `equation.6.2.2', line 21.
 ]
 Package hyperref Info: Anchor `Item.16' on input line 57.
 Package hyperref Info: Anchor `Item.17' on input line 62.
@@ -3110,8 +3512,8 @@ Package hyperref Info: Anchor `Item.20' on input line 80.
 Package hyperref Info: Anchor `Item.21' on input line 85.
 Package hyperref Info: Anchor `Item.22' on input line 91.
 Package hyperref Info: Anchor `Item.23' on input line 96.
-Package hyperref Info: Anchor `page.50' on input line 103.
- [50]
+Package hyperref Info: Anchor `page.60' on input line 103.
+ [60]
 Package hyperref Info: Anchor `Item.24' on input line 103.
 Package hyperref Info: Anchor `Item.25' on input line 108.
 Package hyperref Info: Anchor `Item.26' on input line 115.
@@ -3120,9 +3522,9 @@ Package hyperref Info: Anchor `Item.28' on input line 128.
 Package hyperref Info: Anchor `Item.29' on input line 133.
 Package hyperref Info: Anchor `Item.30' on input line 138.
 Package hyperref Info: Anchor `Item.31' on input line 143.
-Package hyperref Info: Anchor `page.51' on input line 150.
+Package hyperref Info: Anchor `page.61' on input line 150.
 
-[51]
+[61]
 Package hyperref Info: Anchor `Item.32' on input line 151.
 Package hyperref Info: Anchor `Item.33' on input line 156.
 Package hyperref Info: Anchor `Item.34' on input line 161.
@@ -3130,8 +3532,8 @@ Package hyperref Info: Anchor `Item.35' on input line 166.
 Package hyperref Info: Anchor `Item.36' on input line 172.
 Package hyperref Info: Anchor `Item.37' on input line 178.
 Package hyperref Info: Anchor `Item.38' on input line 185.
-Package hyperref Info: Anchor `page.52' on input line 190.
- [52]
+Package hyperref Info: Anchor `page.62' on input line 190.
+ [62]
 Package hyperref Info: Anchor `Item.39' on input line 191.
 Package hyperref Info: Anchor `Item.40' on input line 196.
 Package hyperref Info: Anchor `Item.41' on input line 202.
@@ -3139,12 +3541,12 @@ Package hyperref Info: Anchor `Item.42' on input line 208.
 Package hyperref Info: Anchor `Item.43' on input line 213.
 Package hyperref Info: Anchor `Item.44' on input line 221.
 Package hyperref Info: Anchor `Item.45' on input line 228.
-Package hyperref Info: Anchor `page.53' on input line 233.
- [53]
+Package hyperref Info: Anchor `page.63' on input line 233.
+ [63]
 Package hyperref Info: Anchor `Item.46' on input line 234.
 ))
-Package hyperref Info: Anchor `page.54' on input line 222.
- [54]
+Package hyperref Info: Anchor `page.64' on input line 222.
+ [64]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
  (dist/thesis.aux)
@@ -3157,16 +3559,19 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
  ) 
 Here is how much of TeX's memory you used:
- 29537 strings out of 493014
- 512330 string characters out of 6133351
- 540584 words of memory out of 5000000
- 31761 multiletter control sequences out of 15000+600000
- 145038 words of font info for 464 fonts, out of 8000000 for 9000
+ 29678 strings out of 493014
+ 514454 string characters out of 6133351
+ 543230 words of memory out of 5000000
+ 31849 multiletter control sequences out of 15000+600000
+ 146227 words of font info for 468 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,12n,66p,1223b,1945s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,12n,66p,1223b,1992s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/arphic/bkaiu/bkaiu30.pfb></usr/local/texlive
 /2016/texmf-dist/fonts/type1/arphic/bkaiu/bkaiu4e.pfb></usr/local/texlive/2016/
@@ -3306,10 +3711,10 @@ dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on dist/thesis.pdf (62 pages, 7083603 bytes).
+Output written on dist/thesis.pdf (72 pages, 7567584 bytes).
 PDF statistics:
- 1536 PDF objects out of 1728 (max. 8388607)
- 1174 compressed objects within 12 object streams
- 227 named destinations out of 1000 (max. 500000)
- 910 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1720 PDF objects out of 1728 (max. 8388607)
+ 1340 compressed objects within 14 object streams
+ 263 named destinations out of 1000 (max. 500000)
+ 1069 words of extra memory for PDF output out of 10000 (max. 10000000)
 
