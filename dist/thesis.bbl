@@ -236,4 +236,9 @@ Diederik Kingma and Jimmy Ba,
 \newblock ``Adam: A method for stochastic optimization,''
 \newblock {\em arXiv preprint arXiv:1412.6980}, 2014.
 
+\bibitem{dunteman1989principal}
+George~H Dunteman,
+\newblock {\em Principal components analysis},
+\newblock Number~69. Sage, 1989.
+
 \end{thebibliography}

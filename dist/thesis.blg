@@ -4,11 +4,11 @@ The top-level auxiliary file: dist/thesis.aux
 The style file: IEEEbib.bst
 Database file #1: thesis_bib.bib
 Warning--entry type for "shen2016" isn't style-file defined
---line 205 of file thesis_bib.bib
+--line 221 of file thesis_bib.bib
 Warning--I'm ignoring shen2016's extra "title" field
---line 209 of file thesis_bib.bib
+--line 225 of file thesis_bib.bib
 Warning--I'm ignoring shen2016's extra "author" field
---line 213 of file thesis_bib.bib
+--line 229 of file thesis_bib.bib
 Warning--empty journal in robertson1997probability
 Warning--empty year in robertson1997probability
 Warning--empty journal in garofolo2000trec
@@ -17,45 +17,46 @@ Warning--empty year in rumelhart1988learning
 Warning--empty journal in kumar2015ask
 Warning--empty year in kumar2015ask
 Warning--empty year in agrawal2015vqa
-You've used 40 entries,
+Warning--there's a number but no series in dunteman1989principal
+You've used 41 entries,
             1838 wiz_defined-function locations,
-            671 strings with 10454 characters,
-and the built_in function-call counts, 10647 in all, are:
-= -- 995
-> -- 426
-< -- 17
-+ -- 158
-- -- 118
-* -- 760
-:= -- 1553
-add.period$ -- 49
-call.type$ -- 40
+            677 strings with 10532 characters,
+and the built_in function-call counts, 10815 in all, are:
+= -- 1012
+> -- 430
+< -- 18
++ -- 160
+- -- 119
+* -- 769
+:= -- 1579
+add.period$ -- 51
+call.type$ -- 41
 change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 510
-empty$ -- 1026
-format.name$ -- 118
-if$ -- 2478
+cite$ -- 50
+duplicate$ -- 520
+empty$ -- 1045
+format.name$ -- 119
+if$ -- 2519
 int.to.chr$ -- 0
-int.to.str$ -- 40
-missing$ -- 37
-newline$ -- 201
-num.names$ -- 39
-pop$ -- 151
+int.to.str$ -- 41
+missing$ -- 39
+newline$ -- 206
+num.names$ -- 40
+pop$ -- 156
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 309
+skip$ -- 310
 stack$ -- 0
 substring$ -- 733
-swap$ -- 201
-text.length$ -- 17
+swap$ -- 203
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 8
-while$ -- 104
-width$ -- 42
-write$ -- 429
-(There were 11 warnings)
+warning$ -- 9
+while$ -- 105
+width$ -- 43
+write$ -- 440
+(There were 12 warnings)
