@@ -48,35 +48,36 @@
 \contentsline {subsection}{\numberline {4.3.1}系統架構簡介}{38}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}語音查詢詞之向量表示法}{39}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}專注式機制與語音文件表示法}{40}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}分類器}{42}{subsection.4.3.4}
-\contentsline {section}{\numberline {4.4}實驗與分析}{42}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}基準實驗與實驗設定}{42}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}實驗結果與比較}{43}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}結合基準實驗}{44}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}專注式機制探討}{45}{subsection.4.4.4}
-\contentsline {subsection}{\numberline {4.4.5}非監督式訓練}{48}{subsection.4.4.5}
-\contentsline {section}{\numberline {4.5}本章總結}{49}{section.4.5}
-\contentsline {chapter}{\numberline {\CJKnumber {5}、}語音詞向量之口語詞彙偵測}{50}{chapter.5}
-\contentsline {section}{\numberline {5.1}簡介}{50}{section.5.1}
-\contentsline {section}{\numberline {5.2}語音詞向量}{50}{section.5.2}
-\contentsline {section}{\numberline {5.3}模型架構}{52}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}模型簡介}{52}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}推理機制（Inference mechanism）}{52}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}訓練方式}{52}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}實驗與分析}{53}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}實驗設定與基準實驗}{53}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}實驗結果與分析}{54}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}本章總結}{57}{section.5.5}
-\contentsline {chapter}{\numberline {\CJKnumber {6}、}專注式和語音詞向量之口語詞彙偵測}{58}{chapter.6}
-\contentsline {section}{\numberline {6.1}簡介}{58}{section.6.1}
-\contentsline {section}{\numberline {6.2}模型架構}{58}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}模型簡介}{58}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}訓練方式}{60}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}實驗與分析}{61}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}實驗設定與基準實驗}{61}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}實驗結果與分析}{62}{subsection.6.3.2}
-\contentsline {section}{\numberline {6.4}本章總結}{63}{section.6.4}
-\contentsline {chapter}{\numberline {\CJKnumber {7}、}結論與展望}{64}{chapter.7}
-\contentsline {section}{\numberline {7.1}結論}{64}{section.7.1}
-\contentsline {section}{\numberline {7.2}未來與展望}{65}{section.7.2}
-\contentsline {chapter}{參考文獻}{66}{section*.49}
+\contentsline {subsection}{\numberline {4.3.4}回顧機制}{42}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}分類器}{43}{subsection.4.3.5}
+\contentsline {section}{\numberline {4.4}實驗與分析}{43}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}基準實驗與實驗設定}{43}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}實驗結果與比較}{44}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}結合基準實驗}{45}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}專注式機制探討}{46}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}非監督式訓練}{52}{subsection.4.4.5}
+\contentsline {section}{\numberline {4.5}本章總結}{53}{section.4.5}
+\contentsline {chapter}{\numberline {\CJKnumber {5}、}語音詞向量之口語詞彙偵測}{54}{chapter.5}
+\contentsline {section}{\numberline {5.1}簡介}{54}{section.5.1}
+\contentsline {section}{\numberline {5.2}語音詞向量}{54}{section.5.2}
+\contentsline {section}{\numberline {5.3}模型架構}{56}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}模型簡介}{56}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}推理機制（Inference mechanism）}{56}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}訓練方式}{56}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}實驗與分析}{57}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}實驗設定與基準實驗}{57}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}實驗結果與分析}{58}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}本章總結}{61}{section.5.5}
+\contentsline {chapter}{\numberline {\CJKnumber {6}、}專注式和語音詞向量之口語詞彙偵測}{62}{chapter.6}
+\contentsline {section}{\numberline {6.1}簡介}{62}{section.6.1}
+\contentsline {section}{\numberline {6.2}模型架構}{62}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}模型簡介}{62}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}訓練方式}{64}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}實驗與分析}{65}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}實驗設定與基準實驗}{65}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}實驗結果與分析}{66}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}本章總結}{67}{section.6.4}
+\contentsline {chapter}{\numberline {\CJKnumber {7}、}結論與展望}{68}{chapter.7}
+\contentsline {section}{\numberline {7.1}結論}{68}{section.7.1}
+\contentsline {section}{\numberline {7.2}未來與展望}{69}{section.7.2}
+\contentsline {chapter}{參考文獻}{70}{section*.54}

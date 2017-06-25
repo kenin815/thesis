@@ -24,18 +24,20 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces 模型架構圖\relax }}{39}{figure.caption.31}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces 專注式機制流程圖\relax }}{40}{figure.caption.32}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 專注式機制視覺圖\relax }}{46}{figure.caption.36}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 尖銳正規化頻譜圖\relax }}{47}{figure.caption.37}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces 平滑正規化頻譜圖\relax }}{48}{figure.caption.38}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 回顧機制流程圖\relax }}{42}{figure.caption.33}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 專注式機制視覺圖\relax }}{47}{figure.caption.37}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 尖銳正規化頻譜圖\relax }}{48}{figure.caption.38}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 平滑正規化頻譜圖\relax }}{49}{figure.caption.39}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 專注式權重最大位置與查詢詞位置差距分佈圖\relax }}{50}{figure.caption.41}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces 語音詞向量模型圖\relax }}{51}{figure.caption.40}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces 模型推論機制示意圖\relax }}{53}{figure.caption.41}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces 語音詞向量視覺圖\relax }}{55}{figure.caption.43}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{55}{subfigure.3.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{55}{subfigure.3.2}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces 查詢詞之語音詞向量視覺圖\relax }}{56}{figure.caption.44}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 語音詞向量模型圖\relax }}{55}{figure.caption.45}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 模型推論機制示意圖\relax }}{57}{figure.caption.46}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 語音詞向量視覺圖\relax }}{59}{figure.caption.48}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{59}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{59}{subfigure.3.2}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces 查詢詞之語音詞向量視覺圖\relax }}{60}{figure.caption.49}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces 模型架構圖\relax }}{59}{figure.caption.45}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces 專注式機制圖\relax }}{59}{figure.caption.46}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces 語音詞向量正規化機制圖\relax }}{60}{figure.caption.47}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces 模型架構圖\relax }}{63}{figure.caption.50}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces 專注式機制圖\relax }}{63}{figure.caption.51}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces 語音詞向量正規化機制圖\relax }}{64}{figure.caption.52}
 \addvspace {10\p@ }
