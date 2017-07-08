@@ -1,6 +1,6 @@
 \contentsline {chapter}{口試委員會審定書}{i}{Doc-Start}
 \contentsline {chapter}{誌謝}{ii}{Doc-Start}
-\contentsline {chapter}{中文摘要}{iii}{Doc-Start}
+\contentsline {chapter}{中文摘要}{iv}{Doc-Start}
 \contentsline {chapter}{\numberline {\CJKnumber {1}、}導論}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}研究動機}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}研究方向}{3}{section.1.2}
@@ -16,22 +16,22 @@
 \contentsline {subsubsection}{準確率(Precision)與召回率(Recall)}{11}{section*.9}
 \contentsline {subsubsection}{P@N}{12}{section*.11}
 \contentsline {subsubsection}{平均準確率\nobreakspace {}\cite {garofolo2000trec}}{13}{section*.12}
-\contentsline {section}{\numberline {2.2}深層類神經網路（Deep Neural Network, DNN）}{13}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}簡介}{13}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.2}深層類神經網路（Deep Neural Network, DNN）}{14}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}簡介}{14}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}運作原理}{15}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}訓練類神經網路}{16}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}類神經網路的困難}{18}{subsection.2.2.4}
 \contentsline {section}{\numberline {2.3}遞迴式類神經網路（Recurrent Neural Network,RNN）}{20}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}簡介}{20}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}運作原理}{20}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}運作原理}{21}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}沿時間反向傳播演算法}{21}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}長短期記憶神經網路}{21}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.4}長短期記憶神經網路}{22}{subsection.2.3.4}
 \contentsline {section}{\numberline {2.4}本章總結}{25}{section.2.4}
-\contentsline {chapter}{\numberline {\CJKnumber {3}、}以遞迴類神經網路之口語詞彙偵測}{26}{chapter.3}
+\contentsline {chapter}{\numberline {\CJKnumber {3}、}基於遞迴類神經網路之依例查詢口述語彙偵測}{26}{chapter.3}
 \contentsline {section}{\numberline {3.1}簡介}{26}{section.3.1}
-\contentsline {section}{\numberline {3.2}利用遞迴式神經網路的特徵向量表示法}{26}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}抽取聲學特徵}{26}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}序列對序列模型（Sequence-to-Sequence Model）\cite {sutskever2014sequence}}{29}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.2}利用遞迴式神經網路的特徵向量表示法}{27}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}抽取聲學特徵}{27}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}序列對序列模型（Sequence-to-Sequence Model）\cite {sutskever2014sequence}}{30}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}系統架構}{31}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}系統概觀}{31}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}遞迴類神經網路模型}{32}{subsection.3.3.2}
@@ -41,23 +41,24 @@
 \contentsline {subsection}{\numberline {3.4.2}基準實驗}{34}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}實驗結果與分析}{34}{subsection.3.4.3}
 \contentsline {section}{\numberline {3.5}本章總結}{36}{section.3.5}
-\contentsline {chapter}{\numberline {\CJKnumber {4}、}專注式類神經網路之口述詞彙偵測}{37}{chapter.4}
+\contentsline {chapter}{\numberline {\CJKnumber {4}、}基於專注式類神經網路之依例查詢口述語彙偵測}{37}{chapter.4}
 \contentsline {section}{\numberline {4.1}簡介}{37}{section.4.1}
-\contentsline {section}{\numberline {4.2}專注式機制}{37}{section.4.2}
-\contentsline {section}{\numberline {4.3}模型架構}{38}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}系統架構簡介}{38}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}語音查詢詞之向量表示法}{39}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}專注式機制與語音文件表示法}{40}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.2}專注式機制}{38}{section.4.2}
+\contentsline {section}{\numberline {4.3}模型架構}{39}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}系統架構簡介}{39}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}語音查詢詞之向量表示法}{40}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}專注式機制與語音文件表示法}{41}{subsection.4.3.3}
 \contentsline {subsection}{\numberline {4.3.4}回顧機制}{42}{subsection.4.3.4}
 \contentsline {subsection}{\numberline {4.3.5}分類器}{43}{subsection.4.3.5}
-\contentsline {section}{\numberline {4.4}實驗與分析}{43}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}基準實驗與實驗設定}{43}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}實驗結果與比較}{44}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}結合基準實驗}{45}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}專注式機制探討}{46}{subsection.4.4.4}
-\contentsline {subsection}{\numberline {4.4.5}非監督式訓練}{52}{subsection.4.4.5}
-\contentsline {section}{\numberline {4.5}本章總結}{53}{section.4.5}
-\contentsline {chapter}{\numberline {\CJKnumber {5}、}語音詞向量之口語詞彙偵測}{54}{chapter.5}
+\contentsline {section}{\numberline {4.4}非監督式訓練}{43}{section.4.4}
+\contentsline {section}{\numberline {4.5}實驗與分析}{44}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}基準實驗與實驗設定}{44}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}實驗結果與比較}{44}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}結合基準實驗}{46}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}專注式機制探討}{47}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}非監督式訓練結果}{52}{subsection.4.5.5}
+\contentsline {section}{\numberline {4.6}本章總結}{53}{section.4.6}
+\contentsline {chapter}{\numberline {\CJKnumber {5}、}基於語音詞向量之依例查詢口述語彙偵測}{54}{chapter.5}
 \contentsline {section}{\numberline {5.1}簡介}{54}{section.5.1}
 \contentsline {section}{\numberline {5.2}語音詞向量}{54}{section.5.2}
 \contentsline {section}{\numberline {5.3}模型架構}{56}{section.5.3}
@@ -68,7 +69,7 @@
 \contentsline {subsection}{\numberline {5.4.1}實驗設定與基準實驗}{57}{subsection.5.4.1}
 \contentsline {subsection}{\numberline {5.4.2}實驗結果與分析}{58}{subsection.5.4.2}
 \contentsline {section}{\numberline {5.5}本章總結}{61}{section.5.5}
-\contentsline {chapter}{\numberline {\CJKnumber {6}、}專注式和語音詞向量之口語詞彙偵測}{62}{chapter.6}
+\contentsline {chapter}{\numberline {\CJKnumber {6}、}基於專注式和語音詞向量之依例查詢口述語彙偵測}{62}{chapter.6}
 \contentsline {section}{\numberline {6.1}簡介}{62}{section.6.1}
 \contentsline {section}{\numberline {6.2}模型架構}{62}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}模型簡介}{62}{subsection.6.2.1}

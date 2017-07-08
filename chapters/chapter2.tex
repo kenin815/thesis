@@ -12,8 +12,8 @@
 \end{figure}
 
 檢索對象  $ x $ 
-指的是系統所檢索出的東西，例如：在文字搜尋中檢索對象指的是文章、在網路檢索中指的是網頁、在圖像檢索指的是圖片、在語音檢索指的是口語片段（Spoken Segment）等，同時，查詞對象  $ Q $  也可以為圖片、文字或聲音。
-本篇論文中所使用的查詢詞  $ Q $  形式有二：文字構成的字串、口述形式。本篇論文使用  $ x $  則都是語音文件。
+指的是系統所檢索出的東西，例如：在文字搜尋中檢索對象指的是文章、在網路檢索中指的是網頁、在圖像檢索指的是圖片、在語音檢索指的是口述片段（Spoken Segment）等，同時，查詞對象  $ Q $  也可以為圖片、文字或聲音。
+本篇論文中所使用的查詢詞  $ Q $  形式為口述形式（Spoken Query）。本篇論文使用  $ x $  則都是語音文件。
 
 當有了查詢對象，系統的主要任務就是去計算相關性（Relevance），其定義為  $ P(R|x,Q) $  ，然後依此機率大小對檢索對象進行排序，這個排序方式
 被稱為機率排序原則 （Probability Ranking Principle,PRP）\cite{robertson1997probability}。
@@ -53,7 +53,8 @@ Matching），主要有兩種檢索情境。第一種是先將語音文件辨識
 （Query-by-Example），系統直接利用如動態時間校準（Dynamic Time Warping）
 等方法在信號上比對語音文件中是否有某一段聲音與查詢詞很相像，過去的方法通常是為了解決不同文件間語速上的差異提出如有斜率限制的動態時間校準（Slope-Constraint
 DTW），或是為了解決動態時間校準逐一比對所有文件庫所花時間過多的問題。計算此情境下的
- $ S(Q, x) $  為利用片段式動態時間規劃 （Segmental Dynamic Time Warping），簡介於~\ref{sec:chap4_sdtw}。
+ $ S(Q, x) $  為利用片段式動態時間規劃 （Segmental Dynamic Time
+ Warping），簡介於小節~\ref{sec:chap4_sdtw}。
 
 \subsubsection{語意檢索}
 語意檢索的目的為回傳概念上相關的語音文件，而不一定要出現查詢詞。希望查詢結果與輸入的查詢詞是概念上匹配（Concept
@@ -160,7 +161,7 @@ MAP = \frac{1}{|Q|} \sum_Q \frac{\sum_{d \in D^R}precision(d)}{|D^R|}
 
 
 
-
+\vspace{10cm}
 \section{深層類神經網路（Deep Neural Network, DNN）}
 \label{DNN}
 \subsection{簡介}
